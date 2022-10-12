@@ -1,1 +1,1 @@
-<img src="https://i.ytimg.com/vi/g6cJGWpdRvM/mqdefault.jpg" />
+<img src="https://i.ytimg.com/vi/agmHHKF7kGk/hqdefault.jpg" />
