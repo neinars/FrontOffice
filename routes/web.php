@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/visitor', [App\Http\Controllers\VisitorController::class, 'index'])->name('buku.tamu');
+
