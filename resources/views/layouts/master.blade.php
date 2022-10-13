@@ -71,67 +71,17 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
+                        <li class="sidebar-item  ">
+                            <a href="{{ url('/visitor') }}" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Components</span>
+                                <span>Buku Tamu</span>
                             </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="component-alert.html">Alert</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-badge.html">Badge</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-breadcrumb.html">Breadcrumb</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-button.html">Button</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-card.html">Card</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-carousel.html">Carousel</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-collapse.html">Collapse</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-dropdown.html">Dropdown</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-list-group.html">List Group</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-modal.html">Modal</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-navs.html">Navs</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-pagination.html">Pagination</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-progress.html">Progress</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-spinner.html">Spinner</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-toasts.html">Toasts</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-tooltip.html">Tooltip</a>
-                                </li>
-                            </ul>
                         </li>
 
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-collection-fill"></i>
-                                <span>Extra Components</span>
+                                <span>Data Guru</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
@@ -155,7 +105,7 @@
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-grid-1x2-fill"></i>
-                                <span>Layouts</span>
+                                <span>Data Siswa</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
@@ -179,102 +129,8 @@
                 </div>
             </div>
         </div>
-        <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a>
-            </header>
-
-            <div class="page-heading">
-                <h3>Data Pengunjung</h3>
-            </div>
-            <div class="page-content">
-                <div class="col-12 col-lg-12">
-                    <div class="row justify-content-between">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex">
-                                <div class="d-flex">
-                                    <div class="card">
-                                        <div class="card-body px-4 py-4-5">
-                                            <div class="row">
-                                                <div
-                                                    class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                                    <div class="stats-icon purple mb-2">
-                                                        <i class="iconly-boldShow"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                                    <h6 class="text-muted font-semibold">Harian</h6>
-                                                    <h6 class="font-extrabold mb-0">1000</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="card">
-                                        <div class="card-body px-4 py-4-5">
-                                            <div class="row">
-                                                <div
-                                                    class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                                    <div class="stats-icon blue mb-2">
-                                                        <i class="iconly-boldProfile"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                                    <h6 class="text-muted font-semibold">Bulanan</h6>
-                                                    <h6 class="font-extrabold mb-0">10.000</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="card">
-                                    <div class="card-body py-4 px-4">
-                                        <div class="d-flex align-items-center">
-                                            <div class="avatar avatar-xl">
-                                                <img src="assets/images/faces/1.jpg" alt="Face 1">
-                                            </div>
-                                            <div class="ms-3 name">
-                                                <h5 class="font-bold">John Duck</h5>
-                                                <h6 class="text-muted mb-0">@johnducky</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Data Diagram</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div id="chart-profile-visit"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Visitors Profile</h4>
-                        </div>
-                        <div class="card-body">
-                            <div id="chart-visitors-profile"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            @yield('main')
-
-        </div>
+        @yield('main')
+        @yield('visitor')
     </div>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/app.js"></script>
