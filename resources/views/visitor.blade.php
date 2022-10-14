@@ -10,71 +10,50 @@
         <div class="col-12 col-md-6 order-md-1 order-last">
             <h3>Buku Tamu</h3>
         </div>
-        <div class="card">
-            <div class="card-header">
-                <button type="button" style="background-color: #B9FF8E" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Tambah Data
-                </button>
-                <div class="card-body" id="exampleModal">
-                    <form class="form">
-                        <div class="row">
-                            <div class="col-md-6 col-12">
-                                <div class="form-group">
-                                    <label for="first-name-column">First Name</label>
-                                    <input type="text" id="first-name-column" class="form-control"
-                                        placeholder="First Name" name="fname-column">
-                                </div>
+
+        <div class="modal fade modal-borderless" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Pemasukan Kas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action=# method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Uraian</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder=""
+                                    name="uraian" required>
                             </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group">
-                                    <label for="last-name-column">Last Name</label>
-                                    <input type="text" id="last-name-column" class="form-control" placeholder="Last Name"
-                                        name="lname-column">
-                                </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Pemasukan</label>
+                                <input type="number" min="1" class="form-control" placeholder="" name="kas"
+                                    autocomplete="off" required>
                             </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group">
-                                    <label for="city-column">City</label>
-                                    <input type="text" id="city-column" class="form-control" placeholder="City"
-                                        name="city-column">
-                                </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Tanggal</label>
+                                <input type="date" class="form-control" id="formGroupExampleInput2" placeholder=""
+                                    name="tanggal" required>
                             </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group">
-                                    <label for="country-floating">Country</label>
-                                    <input type="text" id="country-floating" class="form-control" name="country-floating"
-                                        placeholder="Country">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group">
-                                    <label for="company-column">Company</label>
-                                    <input type="text" id="company-column" class="form-control" name="company-column"
-                                        placeholder="Company">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div class="form-group">
-                                    <label for="email-id-column">Email</label>
-                                    <input type="email" id="email-id-column" class="form-control" name="email-id-column"
-                                        placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="form-group col-12">
-                                <div class='form-check'>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="checkbox5" class='form-check-input' checked>
-                                        <label for="checkbox5">Remember Me</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
-                                <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
-                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Tambah Data</button>
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <button class="btn" type="button" style="background-color: #B9FF8E; color:black" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Tambah Data
+                </button>
+
             </div>
             <div class="card-body">
                 <div class="dataTable-top">
