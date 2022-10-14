@@ -85,19 +85,19 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="extra-component-avatar.html">Avatar</a>
+                                    <a href="extra-component-avatar.html">Senin</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="extra-component-sweetalert.html">Sweet Alert</a>
+                                    <a href="extra-component-sweetalert.html">Selasa</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="extra-component-toastify.html">Toastify</a>
+                                    <a href="extra-component-toastify.html">Rabu</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="extra-component-rating.html">Rating</a>
+                                    <a href="extra-component-rating.html">Kamis</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="extra-component-divider.html">Divider</a>
+                                    <a href="extra-component-divider.html">Jumat</a>
                                 </li>
                             </ul>
                         </li>
@@ -130,7 +130,6 @@
             </div>
         </div>
         @yield('main')
-        @yield('visitor')
     </div>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/app.js"></script>

@@ -18,4 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/visitor', [App\Http\Controllers\VisitorController::class, 'index'])->name('buku.tamu');
+Route::get('/teacher', [App\Http\Controllers\GuruController::class, 'index'])->name('buku.tamu');
 
