@@ -17,5 +17,6 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::get('/visitor', [App\Http\Controllers\VisitorController::class, 'index'])->name('buku.tamu');
+Route::get('visitor', [\App\Http\Controllers\VisitorController::class, 'index'])->name('visitor.index');
+Route::post('visitor/store', [\App\Http\Controllers\VisitorController::class, 'store'])->name('visitor.store'); 
 

@@ -16,5 +16,6 @@ class Visitor extends Model
         'phone_number',
         'meet_with',
         'utilities',
+        'date'
     ];
 }
