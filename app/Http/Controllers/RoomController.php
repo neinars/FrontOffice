@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Visitor;
+use App\Models\Room;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 
-class VisitorController extends Controller
+class RoomController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class VisitorController extends Controller
      */
     public function index()
     {
-        $tdata = Visitor::orderBy('created_at', 'DESC')->get();
-        return view('visitor.index', compact('tdata'));
+        //
     }
 
     /**
@@ -37,38 +35,27 @@ class VisitorController extends Controller
      */
     public function store(Request $request)
     {
-        $tdata = Visitor::create([
-            "name" => $request->name,
-            "address" => $request->address,
-            "instance" => $request->instance,
-            "phone_number" => $request->phone_number,
-            "meet_with" => $request->meet_with,
-            "utilities" => $request->utilities,
-        ]);
-
-        // dd($tdata);
-        return redirect()->back()->with('status', 'Success')->with('data',$tdata);
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Visitor  $visitor
+     * @param  \App\Models\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Room $room)
     {
-        $visitor=Visitor::where('id',$id)->first();
-        return view('visitor.index' , compact('visitor'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Visitor  $visitor
+     * @param  \App\Models\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function edit(Visitor $visitor)
+    public function edit(Room $room)
     {
         //
     }
@@ -77,10 +64,10 @@ class VisitorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Visitor  $visitor
+     * @param  \App\Models\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Visitor $visitor)
+    public function update(Request $request, Room $room)
     {
         //
     }
@@ -88,10 +75,10 @@ class VisitorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Visitor  $visitor
+     * @param  \App\Models\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Visitor $visitor)
+    public function destroy(Room $room)
     {
         //
     }
