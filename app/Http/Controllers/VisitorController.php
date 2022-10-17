@@ -14,7 +14,8 @@ class VisitorController extends Controller
      */
     public function index()
     {
-        return view('visitor');
+        $tdata = Visitor::get();
+        return view('visitor.index', compact('tdata'));
     }
 
     /**
@@ -35,7 +36,7 @@ class VisitorController extends Controller
      */
     public function store(Request $request)
     {
-        Visitor::create([
+        $tdata = Visitor::create([
             "name" => $request->name,
             "address" => $request->address,
             "instance" => $request->instance,
@@ -44,7 +45,8 @@ class VisitorController extends Controller
             "utilities" => $request->utilities,
         ]);
 
-        return redirect()->back()->with('status', 'Success');
+        // dd($tdata);
+        return redirect()->back()->with('status', 'Success')->with('data',$tdata);
     }
 
     /**
