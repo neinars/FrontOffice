@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::get('visitor', [\App\Http\Controllers\VisitorController::class, 'index'])->name('visitor.index');
 Route::post('visitor/store', [\App\Http\Controllers\VisitorController::class, 'store'])->name('visitor.store'); 
+Route::get('visitor/show', [\App\Http\Controllers\VisitorController::class, 'show'])->name('visitor.show'); 
 

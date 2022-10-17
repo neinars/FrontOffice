@@ -7,13 +7,6 @@ aria-hidden="true">
             <h5 class="modal-title" id="exampleModalLabel">Data Pengunjung</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        {{-- "name"
-"address"
-"instance"
-"phone_number"
-"meet_with"
-"utilities"
-        Kedinasan', 'Kesiswaan', 'BP', 'TU', 'Dan lain-lain--}}
         <form action={{ route('visitor.store') }} method="POST" enctype="multipart/form-data">
             @csrf
             <div class="modal-body">
