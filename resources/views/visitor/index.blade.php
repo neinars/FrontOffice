@@ -15,7 +15,7 @@
 
         <div class="card">
             <div class="card-header">
-                <button class="btn" type="button" style="background-color: #B9FF8E; color:black" data-bs-toggle="modal"
+                <button class="btn" type="button" style="background-color: #435ebe; color: white" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">
                     Tambah Data
                 </button>
@@ -45,11 +45,31 @@
                             <td>{{ $t->address }}</td>
                             <td>{{ $t->instance }}</td>
                             <td>{{ $t->phone_number }}</td>
-                            <td>{{ $t->meet_with }}</td>
-                            <td>{{ $t->utilities }}</td>
+                            <td>{{ $t->meet->meet_with }}</td>
+                            <td>{{ $t->utility->utilities }}</td>
+                            {{-- @dd($t->meet->meet_with) --}}
                             <td style="width: 100px;">
-                                <button class="badge bg-success "><i class="bi bi-eye-fill"></i></button>
-                                <button class="badge bg-danger"><i class="bi bi-trash-fill"></i></button>
+                                <!-- Button trigger modal -->
+                                <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-eye-fill"></i></button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                <button class="btn btn-outline-danger"><i class="bi bi-trash-fill"></i></button>
                             </td>
                         </tr>
                         @endforeach

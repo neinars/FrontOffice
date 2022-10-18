@@ -19,8 +19,8 @@ class CreateVisitorsTable extends Migration
             $table->string('address');
             $table->string('instance')->nullable();
             $table->string('phone_number')->nullable();
-            $table->enum('meet_with', ['Kepala Sekolah', 'TU', 'BP', 'Staff Management', 'Staff TU', 'Guru', 'Guru Piket', 'Dan lain-lain']);
-            $table->enum('utilities', ['Kedinasan', 'Kesiswaan', 'BP', 'TU', 'Dan lain-lain']);
+            $table->foreignId('meet_id')->constrained();
+            $table->foreignId('utility_id')->constrained();
             $table->timestamps();
         });
     }

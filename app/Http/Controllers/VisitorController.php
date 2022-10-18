@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Visitor;
+use App\Models\Meet;
+use App\Models\Utility;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
@@ -16,7 +18,11 @@ class VisitorController extends Controller
     public function index()
     {
         $tdata = Visitor::orderBy('created_at', 'DESC')->get();
-        return view('visitor.index', compact('tdata'));
+        $meet = Meet::get();
+        $utility = Utility::get();
+
+        // dd($utility);
+        return view('visitor.index', compact('tdata','meet','utility'));
     }
 
     /**
@@ -42,8 +48,8 @@ class VisitorController extends Controller
             "address" => $request->address,
             "instance" => $request->instance,
             "phone_number" => $request->phone_number,
-            "meet_with" => $request->meet_with,
-            "utilities" => $request->utilities,
+            "meet_id" => $request->meet_id,
+            "utility_id" => $request->utility_id,
         ]);
 
         // dd($tdata);

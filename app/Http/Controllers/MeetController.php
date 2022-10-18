@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Meet;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
 
 class MeetController extends Controller

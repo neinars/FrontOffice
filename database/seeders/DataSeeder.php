@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Visitor;
+use App\Models\Meet;
+use App\Models\Utility;
 
 class DataSeeder extends Seeder
 {
@@ -14,13 +16,55 @@ class DataSeeder extends Seeder
      */
     public function run()
     {
+        Meet::create([
+            'meet_with' => 'Kepala Sekolah',
+        ]);
+        Meet::create([
+            'meet_with' => 'TU',
+        ]);
+        Meet::create([
+            'meet_with' => 'BP',
+        ]);
+        Meet::create([
+            'meet_with' => 'Staff Management',
+        ]);
+        Meet::create([
+            'meet_with' => 'Staff TU',
+        ]);
+        Meet::create([
+            'meet_with' => 'Guru',
+        ]);
+        Meet::create([
+            'meet_with' => 'Guru Piket',
+        ]);
+        Meet::create([
+            'meet_with' => 'Dan lain-lain',
+        ]);
+
+
+        Utility::create([
+            'utilities' => 'Kedinasan'
+        ]);
+        Utility::create([
+            'utilities' => 'Kesiswaan'
+        ]);
+        Utility::create([
+            'utilities' => 'BP'
+        ]);
+        Utility::create([
+            'utilities' => 'TU'
+        ]);
+        Utility::create([
+            'utilities' => 'Dan lain-lain'
+        ]);
+
         Visitor::create([
             'name' => 'Wulan',
             'address' => 'Jalan Abimanyu',
             'instance' => null,
             'phone_number' => null,
-            'meet_with' => 'Staff TU',
-            'utilities' => 'TU',
+            'meet_id' => 1,
+            'utility_id' => 4,
         ]);
 
         Visitor::create([
@@ -28,8 +72,8 @@ class DataSeeder extends Seeder
             'address' => 'Presidential',
             'instance' => 'PT Johanna Luar',
             'phone_number' => '021631784',
-            'meet_with' => 'Kepala Sekolah',
-            'utilities' => 'Kedinasan',
+            'meet_id' => 1,
+            'utility_id' => 1,
         ]);
 
         Visitor::create([
@@ -37,8 +81,8 @@ class DataSeeder extends Seeder
             'address' => 'Jalan Hudayana',
             'instance' => 'CV Bintaro',
             'phone_number' => '021491393',
-            'meet_with' => 'Kepala Sekolah',
-            'utilities' => 'Kedinasan',
+            'meet_id' => 1,
+            'utility_id' => 1,
         ]);
     }
 }
