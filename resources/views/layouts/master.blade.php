@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Mazer Admin Dashboard</title>
+    <title>Dashboard - Front Office</title>
 
     <link rel="stylesheet" href="assets/css/main/app.css">
     <link rel="stylesheet" href="assets/css/main/app-dark.css">
@@ -12,6 +12,9 @@
     <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
 
     <link rel="stylesheet" href="assets/css/shared/iconly.css">
+
+    <link rel="stylesheet" href="assets/extensions/simple-datatables/style.css">
+<link rel="stylesheet" href="assets/css/pages/simple-datatables.css">
 
 </head>
 
@@ -22,8 +25,9 @@
                 <div class="sidebar-header position-relative">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo/logo.svg" alt="Logo"
-                                    srcset=""></a>
+                            <h4>cybercode</h4>
+                            {{-- <a href="index.html"><img src="assets/images/logo/logorpl3.jpeg" alt="Logo"
+                                    srcset=""></a> --}}
                         </div>
                         <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -85,16 +89,16 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="extra-component-avatar.html">Senin</a>
+                                    <a href="{{ url('/teacher') }}">Senin</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="extra-component-sweetalert.html">Selasa</a>
+                                    <a href="{{ url('/teacher') }}">Selasa</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="extra-component-toastify.html">Rabu</a>
+                                    <a href="{{ url('/teacher') }}">Rabu</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="extra-component-rating.html">Kamis</a>
+                                    <a href="{{ url('/teacher') }}">Kamis</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="extra-component-divider.html">Jumat</a>
@@ -102,28 +106,24 @@
                             </ul>
                         </li>
 
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
+                        <li class="sidebar-item ">
+                            <a href="{{ url('/siswa') }}" class='sidebar-link'>
                                 <i class="bi bi-grid-1x2-fill"></i>
                                 <span>Data Siswa</span>
                             </a>
-                            <ul class="submenu ">
+                            {{-- <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="layout-default.html">Default Layout</a>
+                                    <a href="{{ url('/teacher') }}">Rekayasa Perangkat Lunak</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="layout-vertical-1-column.html">1 Column</a>
+                                    <a href="{{ url('/teacher') }}">Bisnis Daring Pemasaran</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="layout-vertical-navbar.html">Vertical Navbar</a>
+                                    <a href="{{ url('/teacher') }}">Akutansi Keuangan Lembaga</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="layout-rtl.html">RTL Layout</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="layout-horizontal.html">Horizontal Menu</a>
-                                </li>
-                            </ul>
+                                    <a href="{{ url('/teacher') }}">Otomatisasi Tata Kelola Perkantoran</a>
+                                </li> --}}
                         </li>
                     </ul>
                 </div>
@@ -137,6 +137,10 @@
     <!-- Need: Apexcharts -->
     <script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
     <script src="assets/js/pages/dashboard.js"></script>
+
+    <script src="assets/extensions/simple-datatables/umd/simple-datatables.js"></script>
+<script src="assets/js/pages/simple-datatables.js"></script>
+
 
 </body>
 

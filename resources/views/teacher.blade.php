@@ -55,13 +55,12 @@
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <button class="btn" type="button" style="background-color: #B9FF8E; color:black"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Tambah Data
                         </button>
                     </div>
                     <div class="card-body">
-                        <div class="dataTable-top">
+                        {{-- <div class="dataTable-top">
                             <div class="dataTable-dropdown">
                                 <select class="dataTable-selector form-select">
                                     <option value="5">5</option>
@@ -72,7 +71,7 @@
                                 </select>
                                 <label> entries per page</label>
                             </div>
-                        </div>
+                        </div> --}}
                         <table class="table table-striped" id="table1">
                             <thead>
                                 <tr>

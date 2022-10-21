@@ -15,7 +15,7 @@
 
         <div class="card">
             <div class="card-header">
-                <button class="btn" type="button" style="background-color: #B9FF8E; color:black" data-bs-toggle="modal"
+                <button class="btn btn-primary" type="button" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">
                     Tambah Data
                 </button>
@@ -48,8 +48,8 @@
                             <td>{{ $t->meet_with }}</td>
                             <td>{{ $t->utilities }}</td>
                             <td style="width: 100px;">
-                                <button class="badge bg-success "><i class="bi bi-eye-fill"></i></button>
-                                <button class="badge bg-danger"><i class="bi bi-trash-fill"></i></button>
+                                <button class="btn btn-primary mb-1 "><i class="bi bi-eye-fill"></i></button>
+                                <button class="btn btn-secondary"><i class="bi bi-trash-fill"></i></button>
                             </td>
                         </tr>
                         @endforeach

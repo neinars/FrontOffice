@@ -26,6 +26,11 @@
             </div>
             <section class="section">
                 <div class="card">
+                    <div class="card-header">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Tambah Data
+                        </button>
+                    </div>
                     <div class="card-body">
                         <table class="table table-striped" id="table1">
                             <thead>

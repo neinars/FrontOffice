@@ -20,6 +20,6 @@ Route::get('/', function () {
 Route::get('visitor', [\App\Http\Controllers\VisitorController::class, 'index'])->name('visitor.index');
 Route::post('visitor/store', [\App\Http\Controllers\VisitorController::class, 'store'])->name('visitor.store'); 
 
-Route::get('teacher', [\App\Http\Controllers\GuruController::class, 'index'])->name('teacher.index');
+Route::get('teacher', [\App\Http\Controllers\TeacherController::class, 'index'])->name('teacher.index');
 
 Route::get('siswa', [\App\Http\Controllers\StudentController::class, 'index'])->name('student.index');
