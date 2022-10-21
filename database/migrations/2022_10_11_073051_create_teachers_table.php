@@ -15,6 +15,11 @@ class CreateTeachersTable extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('hour_start');
+            $table->string('hour_end');
+            $table->foreignId('rooms_id')->constrained();
+            $table->foreignId('majors_id')->constrained();
             $table->timestamps();
         });
     }

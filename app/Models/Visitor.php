@@ -16,6 +16,7 @@ class Visitor extends Model
         'phone_number',
         'meet_id',
         'utility_id',
+        'desc',
         'date'
     ];
 

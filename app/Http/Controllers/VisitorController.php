@@ -21,7 +21,7 @@ class VisitorController extends Controller
         $meet = Meet::get();
         $utility = Utility::get();
 
-        // dd($utility);
+        // dd($t);
         return view('visitor.index', compact('tdata','meet','utility'));
     }
 
@@ -50,6 +50,7 @@ class VisitorController extends Controller
             "phone_number" => $request->phone_number,
             "meet_id" => $request->meet_id,
             "utility_id" => $request->utility_id,
+            "desc" => $request->desc
         ]);
 
         // dd($tdata);
@@ -64,8 +65,8 @@ class VisitorController extends Controller
      */
     public function show($id)
     {
-        $visitor=Visitor::where('id',$id)->first();
-        return view('visitor.index' , compact('visitor'));
+        // $visitor=Visitor::where('id',$id)->first();
+        // return view('visitor.index' , compact('visitor'));
     }
 
     /**

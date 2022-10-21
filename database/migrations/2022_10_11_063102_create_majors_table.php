@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubjectsTable extends Migration
+class CreateMajorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateSubjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('subjects', function (Blueprint $table) {
+        Schema::create('majors', function (Blueprint $table) {
             $table->id();
-            $table->enum('subject' , ['mapel 1']);
+            $table->enum('name', ['Rekayasa Perangkat Lunak', 'Akuntansi Keuangan Lembaga', 'Bisnis Daring Pemasaran', 'Otomatisasi Tatakelola Perkantoran']);
+            $table->enum('class', ['1','2'])->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateSubjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subjects');
+        Schema::dropIfExists('majors');
     }
 }
