@@ -14,8 +14,16 @@ class Visitor extends Model
         'address',
         'instance',
         'phone_number',
-        'meet_with',
-        'utilities',
+        'meet_id',
+        'utility_id',
         'date'
     ];
+
+    public function meet(){
+        return $this->hasOne(Meet::class, 'id' , 'meet_id');
+    }
+
+    public function utility(){
+        return $this->hasOne(Utility::class, 'id' , 'utility_id');
+    }
 }

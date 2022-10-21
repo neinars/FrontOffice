@@ -15,6 +15,7 @@ class CreateMeetsTable extends Migration
     {
         Schema::create('meets', function (Blueprint $table) {
             $table->id();
+            $table->enum('meet_with', ['Kepala Sekolah', 'TU', 'BP', 'Staff Management', 'Staff TU', 'Guru', 'Guru Piket', 'Dan lain-lain']);
             $table->timestamps();
         });
     }
