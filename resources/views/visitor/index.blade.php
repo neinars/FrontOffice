@@ -33,7 +33,6 @@
                             <th>Nomor HP</th>
                             <th>Bertemu dengan</th>
                             <th>Kepentingan</th>
-                            <th>Keterangan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -48,11 +47,11 @@
                             <td>{{ $t->phone_number }}</td>
                             <td>{{ $t->meet->meet_with }}</td>
                             <td>{{ $t->utility->utilities }}</td>
-                            {{-- @dd($t) --}}
+                            {{-- @dd($t->id) --}}
                             <td style="width: 100px;">  
                                 <!-- Button trigger modal -->
-                                <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $t->id }}"><i class="bi bi-eye-fill"></i></button>
-                                <button class="btn btn-outline-danger"><i class="bi bi-trash-fill"></i></button>                            
+                                <button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $t->id }}"><i class="bi bi-eye-fill"></i></button>
+                                <a class="btn shadow btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-visitor{{ $t->id }}"><i class="bi bi-trash-fill"></i></i></a>
                             </td>
                         </tr>
                         @endforeach

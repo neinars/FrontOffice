@@ -98,8 +98,15 @@ class VisitorController extends Controller
      * @param  \App\Models\Visitor  $visitor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Visitor $visitor)
+    public function destroy(Visitor $visitor, $id)
     {
-        //
+        // if($id = 'id'){
+        //     $id = $visitor->id;
+        // }
+
+        $visitor = Visitor::find($id);
+        $visitor->delete();
+        // dd($visitor);
+        return redirect()->back();
     }
 }
