@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Teacher;
+use App\Models\Day;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -14,7 +15,9 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        return view('teacher.index');
+        $day = Day::get();
+        $teach = Teacher::get();
+        return view('teacher.index', compact('day','teach'));
     }
 
     /**
@@ -35,7 +38,17 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $teach = Teacher::create([
+            'name' => $request->name,
+            'hour_start' => $request->hour_start,
+            'hour_end' => $request->hour_end,
+            'subject' => $request->subject,
+            'days_id' => $request->days_id,
+            'rooms_id' => $request->rooms_id,
+            'majors_id' => $request->majors_id
+        ]);
+        dd($teach);
+        return redirect()->back()->with('status', 'Success')->with('data',$teach);
     }
 
     /**
