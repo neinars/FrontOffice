@@ -30,24 +30,34 @@
                                 @csrf
                                 <div class="modal-body">
                                     <div class="mb-3">
-                                        <label for="formGroupExampleInput" class="form-label">Guru</label>
+                                        <label for="formGroupExampleInput" class="form-label"> Nama Guru</label>
                                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder=""
                                             name="uraian" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Jam</label>
+                                        <input type="number" min="1" class="form-control" placeholder=""
+                                            name="kas" autocomplete="off" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Mapel</label>
+                                        <input type="number" min="1" class="form-control" placeholder=""
+                                            name="kas" autocomplete="off" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Ruangan</label>
+                                        <input type="number" min="1" class="form-control" placeholder=""
+                                            name="kas" autocomplete="off" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="formGroupExampleInput2" class="form-label">Jurusan</label>
                                         <input type="number" min="1" class="form-control" placeholder=""
                                             name="kas" autocomplete="off" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">NIS</label>
-                                        <input type="number" min="1" class="form-control" placeholder=""
-                                            name="kas" autocomplete="off" required>
-                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-                                    <button type="submit" class="btn btn-primary">Edit Nama Siswa</button>
+                                    <button type="submit" class="btn btn-primary">Edit Guru </button>
                                 </div>
                             </form>
                         </div>

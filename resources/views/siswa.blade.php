@@ -25,6 +25,47 @@
                 </div>
             </div>
             <section class="section">
+                <div class="modal fade modal-borderless" id="exampleModal" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action=# method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput" class="form-label"> Nama</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder=""
+                                            name="uraian" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Jurusan</label>
+                                        <input type="number" min="1" class="form-control" placeholder=""
+                                            name="kas" autocomplete="off" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">NIS</label>
+                                        <input type="number" min="1" class="form-control" placeholder=""
+                                            name="kas" autocomplete="off" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Status</label>
+                                        <input type="number" min="1" class="form-control" placeholder=""
+                                            name="kas" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+                                    <button type="submit" class="btn btn-primary">Edit Siswa </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-header">
                         <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
