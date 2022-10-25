@@ -65,6 +65,7 @@ class DataSeeder extends Seeder
             'phone_number' => null,
             'meet_id' => 1,
             'utility_id' => 4,
+            'desc' => 'asdasd'
         ]);
 
         Visitor::create([
@@ -74,6 +75,7 @@ class DataSeeder extends Seeder
             'phone_number' => '021631784',
             'meet_id' => 1,
             'utility_id' => 1,
+            'desc' => 'asdasd'
         ]);
 
         Visitor::create([
@@ -83,6 +85,7 @@ class DataSeeder extends Seeder
             'phone_number' => '021491393',
             'meet_id' => 1,
             'utility_id' => 1,
+            'desc' => 'asdasd'
         ]);
     }
 }

@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('visitor', [\App\Http\Controllers\VisitorController::class, 'index'])->name('visitor.index');
 Route::post('visitor/store', [\App\Http\Controllers\VisitorController::class, 'store'])->name('visitor.store'); 
+Route::delete('visitor/delete/{id}', [\App\Http\Controllers\VisitorController::class, 'destroy'])->name('visitor.delete');
 
 Route::get('teacher', [\App\Http\Controllers\TeacherController::class, 'index'])->name('teacher.index');
 

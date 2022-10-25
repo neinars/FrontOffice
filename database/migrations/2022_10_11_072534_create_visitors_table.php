@@ -21,6 +21,7 @@ class CreateVisitorsTable extends Migration
             $table->string('phone_number')->nullable();
             $table->foreignId('meet_id')->constrained();
             $table->foreignId('utility_id')->constrained();
+            $table->string('desc')->nullable();
             $table->timestamps();
         });
     }
