@@ -26,7 +26,6 @@
                 <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
-<<<<<<< HEAD
     </div>
 </div>
 @endforeach
@@ -54,10 +53,8 @@
                     </div>
                 </div>
         </div>
-=======
 </div>
 </div>
->>>>>>> da2b44f (21/10/22 add-show visitor clear)
         @endforeach
 
 {{-- MODAL ADD --}}
