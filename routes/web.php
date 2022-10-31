@@ -21,7 +21,9 @@ Route::get('visitor', [\App\Http\Controllers\VisitorController::class, 'index'])
 Route::post('visitor/store', [\App\Http\Controllers\VisitorController::class, 'store'])->name('visitor.store'); 
 Route::delete('visitor/delete/{id}', [\App\Http\Controllers\VisitorController::class, 'destroy'])->name('visitor.delete');
 
-Route::get('teacher', [\App\Http\Controllers\TeacherController::class, 'index'])->name('teacher.index');
+
+
+Route::get('teacher/{hari}', [\App\Http\Controllers\TeacherController::class, 'index']);
 Route::post('teacher/store', [\App\Http\Controllers\TeacherController::class, 'store'])->name('teacher.store'); 
 
 Route::get('siswa', [\App\Http\Controllers\StudentController::class, 'index'])->name('student.index');

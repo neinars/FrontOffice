@@ -15,7 +15,7 @@ class CreateMajorsTable extends Migration
     {
         Schema::create('majors', function (Blueprint $table) {
             $table->id();
-            $table->enum('name', ['Rekayasa Perangkat Lunak', 'Akuntansi Keuangan Lembaga', 'Bisnis Daring Pemasaran', 'Otomatisasi Tatakelola Perkantoran']);
+            $table->enum('name', ['Rekayasa Perangkat Lunak', 'Akuntansi Keuangan Lembaga', 'Bisnis Daring Pemasaran', 'Otomatisasi Tata Kelola Perkantoran']);
             $table->enum('class', ['1','2'])->nullable();
             $table->timestamps();
         });
