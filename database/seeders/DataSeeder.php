@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Visitor;
 use App\Models\Meet;
 use App\Models\Utility;
+use App\Models\Day;
 
 class DataSeeder extends Seeder
 {
@@ -16,6 +17,27 @@ class DataSeeder extends Seeder
      */
     public function run()
     {
+
+        Day::create([
+            'name' => 'Senin'
+        ]);
+
+        Day::create([
+            'name' => 'Selasa'
+        ]);
+
+        Day::create([
+            'name' => 'Rabu'
+        ]);
+
+        Day::create([
+            'name' => 'Kamis'
+        ]);
+
+        Day::create([
+            'name' => 'Jumat'
+        ]);
+
         Meet::create([
             'meet_with' => 'Kepala Sekolah',
         ]);
