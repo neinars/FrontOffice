@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Day;
+use App\Models\Teacher;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +25,7 @@ Route::delete('visitor/delete/{id}', [\App\Http\Controllers\VisitorController::c
 
 
 
-Route::get('teacher/{hari}', [\App\Http\Controllers\TeacherController::class, 'index']);
+Route::get('teacher/{hari}', [\App\Http\Controllers\TeacherController::class, 'index'], function (Day $hari) {})->name('teacher.days');
 Route::post('teacher/store', [\App\Http\Controllers\TeacherController::class, 'store'])->name('teacher.store'); 
 
 Route::get('siswa', [\App\Http\Controllers\StudentController::class, 'index'])->name('student.index');

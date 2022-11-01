@@ -32,7 +32,6 @@
                             <th>Asal Instansi</th>
                             <th>Nomor HP</th>
                             <th>Bertemu dengan</th>
-                            <th>Kepentingan</th>
                             <th>Keterangan</th>
                             <th>Aksi</th>
                         </tr>

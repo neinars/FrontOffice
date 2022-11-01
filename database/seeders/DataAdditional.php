@@ -23,24 +23,79 @@ class DataAdditional extends Seeder
             'name' => 'Rekayasa Perangkat Lunak'
         ]);
         Major::create([
-            'name' => 'Akuntansi Keuangan Lembaga'
+            'name' => 'Akuntansi Keuangan Lembaga 1'
         ]);
         Major::create([
-            'name' => 'Bisnis Daring Pemasaran'
+            'name' => 'Akuntansi Keuangan Lembaga 2'
         ]);
         Major::create([
-            'name' => 'Otomatisasi Tata Kelola Perkantoran'
+            'name' => 'Bisnis Daring Pemasaran 1'
         ]);
         Major::create([
-            'class' => '1'
+            'name' => 'Bisnis Daring Pemasaran 2'
         ]);
         Major::create([
-            'class' => '2'
+            'name' => 'Otomatisasi Tata Kelola Perkantoran 1'
+        ]);
+        Major::create([
+            'name' => 'Otomatisasi Tata Kelola Perkantoran 2'
         ]);
 
         Room::create([
-            'name' => 'Teori'
+            'name' => 'Teori 1'
         ]);
+        Room::create([
+            'name' => 'Teori 2'
+        ]);
+        Room::create([
+            'name' => 'Teori 3'
+        ]);
+        Room::create([
+            'name' => 'Teori 4'
+        ]);
+        Room::create([
+            'name' => 'Teori 5'
+        ]);
+        Room::create([
+            'name' => 'Teori 6'
+        ]);
+        Room::create([
+            'name' => 'Teori 7'
+        ]);
+        Room::create([
+            'name' => 'Teori 8'
+        ]);
+        Room::create([
+            'name' => 'Teori 9'
+        ]);
+        Room::create([
+            'name' => 'Teori 10'
+        ]);
+        Room::create([
+            'name' => 'Teori 11'
+        ]);
+        Room::create([
+            'name' => 'Teori 12'
+        ]);
+        Room::create([
+            'name' => 'Teori 13'
+        ]);
+        Room::create([
+            'name' => 'Teori 14'
+        ]);
+        Room::create([
+            'name' => 'Teori 15'
+        ]);
+        Room::create([
+            'name' => 'Teori 16'
+        ]);
+        Room::create([
+            'name' => 'Teori 17'
+        ]);
+        Room::create([
+            'name' => 'Teori 18'
+        ]);
+
         Room::create([
             'name' => 'Ruang Guru'
         ]);
@@ -81,70 +136,12 @@ class DataAdditional extends Seeder
             'name' => 'Lab BDP'
         ]);
 
-        Room::create([
-            'num' => '1'
-        ]);
-        Room::create([
-            'num' => '2'
-        ]);
-        Room::create([
-            'num' => '3'
-        ]);
-        Room::create([
-            'num' => '4'
-        ]);
-        Room::create([
-            'num' => '5'
-        ]);
-        Room::create([
-            'num' => '6'
-        ]);
-        Room::create([
-            'num' => '7'
-        ]);
-        Room::create([
-            'num' => '8'
-        ]);
-        Room::create([
-            'num' => '9'
-        ]);
-        Room::create([
-            'num' => '10'
-        ]);
-        Room::create([
-            'num' => '11'
-        ]);
-        Room::create([
-            'num' => '12'
-        ]);
-        Room::create([
-            'num' => '13'
-        ]);
-        Room::create([
-            'num' => '14'
-        ]);
-        Room::create([
-            'num' => '15'
-        ]);
-        Room::create([
-            'num' => '16'
-        ]);
-        Room::create([
-            'num' => '17'
-        ]);
-        Room::create([
-            'num' => '18'
-        ]);
-
-        Major::create([
-            ''
-        ]);
 
         Teacher::create([
             'name' => 'Bpk. Mujahid',
             'subject' => 'Pemrograman Dasar',
             'days_id' => 1,
-            'rooms_id' => 11,
+            'rooms_id' => 1,
             'majors_id' => 1,
             'hour_start' => '12.12',
             'hour_end' => '15.00'
