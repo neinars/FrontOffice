@@ -16,7 +16,7 @@
             </div>
             <div class="col-3">
                 <div class="page-heading">
-                    <h3>Profile</h3>
+                    <h3>Profil</h3>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4>Profile Visit</h4>
+                                    <h4>Kunjungan Profil</h4>
                                 </div>
                                 <div class="card-body">
                                     <div id="chart-profile-visit"></div>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h4>Visitors Profile</h4>
+                            <h4>Profil Pengunjung</h4>
                         </div>
                         <div class="card-body">
                             <div id="chart-visitors-profile"></div>

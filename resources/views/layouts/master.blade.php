@@ -25,7 +25,7 @@
                 <div class="sidebar-header position-relative">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
-                            <h4>cybercode</h4>
+                            <h4>FrontOffice</h4>
                             {{-- <a href="index.html"><img src="assets/images/logo/logorpl3.jpeg" alt="Logo"
                                     srcset=""></a> --}}
                         </div>
