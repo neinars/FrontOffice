@@ -20,6 +20,11 @@ class TeacherController extends Controller
         return view('teacher.index', compact('day','teach'));
     }
 
+    public function hari($hari)
+    {
+        
+        
+    }
     /**
      * Show the form for creating a new resource.
      *
