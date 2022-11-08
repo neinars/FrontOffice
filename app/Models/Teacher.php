@@ -24,10 +24,10 @@ class Teacher extends Model
     }
 
     public function rooms(){
-        return $this->hasMany(Room::class);
+        return $this->belongsToMany(Room::class);
     }
 
     public function majors(){
-        return $this->hasMany(Major::class);
+        return $this->belongsToMany(Major::class);
     }
 }

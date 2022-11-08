@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('main')
+    @include('visitor.forms')
     <div id="main">
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
@@ -11,7 +12,6 @@
             <h3>Buku Tamu</h3>
         </div>
 
-        @include('visitor.forms')
 
         <div class="card">
             <div class="card-header">
@@ -38,22 +38,22 @@
                     </thead>
                     <tbody>
                         @foreach ($tdata as $t)
-                        <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $t->created_at }}</td>
-                            <td>{{ $t->name }}</td>
-                            <td>{{ $t->address }}</td>
-                            <td>{{ $t->instance }}</td>
-                            <td>{{ $t->phone_number }}</td>
-                            <td>{{ $t->meet->meet_with }}</td>
-                            <td>{{ $t->utility->utilities }}</td>
-                            {{-- @dd($t->id) --}}
-                            <td style="width: 100px;">  
-                                <!-- Button trigger modal -->
-                                <button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $t->id }}"><i class="bi bi-eye-fill"></i></button>
-                                <a class="btn shadow btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-visitor{{ $t->id }}"><i class="bi bi-trash-fill"></i></i></a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $t->created_at }}</td>
+                                <td>{{ $t->name }}</td>
+                                <td>{{ $t->address }}</td>
+                                <td>{{ $t->instance }}</td>
+                                <td>{{ $t->phone_number }}</td>
+                                <td>{{ $t->meet->meet_with }}</td>
+                                <td>{{ $t->utility->utilities }}</td>
+                                {{-- @dd($t->id) --}}
+                                <td style="width: 100px;">
+                                    <!-- Button trigger modal -->
+                                    <button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $t->id }}"><i class="bi bi-eye-fill"></i></button>
+                                    <a class="btn shadow btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-visitor{{ $t->id }}"><i class="bi bi-trash-fill"></i></i></a>
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>

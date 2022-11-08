@@ -89,19 +89,19 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="{{ url('teacher/{hari}') }}">Senin</a>
+                                    <a href="{{ url('teacher/senin') }}">Senin</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="{{ url('/teacher/{hari}') }}">Selasa</a>
+                                    <a href="{{ url('teacher/selasa') }}">Selasa</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="{{ url('/teacher/{hari}') }}">Rabu</a>
+                                    <a href="{{ url('teacher/rabu') }}">Rabu</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="{{ url('/teacher/{hari}') }}">Kamis</a>
+                                    <a href="{{ url('teacher/kamis') }}">Kamis</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="extra-component-divider.html">Jumat</a>
+                                    <a href="{{ url('teacher/jumat') }}">Jumat</a>
                                 </li>
                             </ul>
                         </li>

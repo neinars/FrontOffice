@@ -13,18 +13,13 @@ class TeacherController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($hari)
     {
-        $day = Day::get();
+        $day = Day::where('day', $hari)->first( );
         $teach = Teacher::get();
         return view('teacher.index', compact('day','teach'));
     }
-
-    public function hari($hari)
-    {
-        
-        
-    }
+    
     /**
      * Show the form for creating a new resource.
      *

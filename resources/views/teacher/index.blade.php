@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('main')
+@include('teacher.forms')
     <div id="main">
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
@@ -12,71 +13,15 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-12 col-md-6 order-md-1 order-last">
-                        <h3>Data Guru / Senin</h3>
+                        <h3>Data Guru / {{ $day->day }}</h3>
                     </div>
                 </div>
             </div>
             <section class="section">
-                <div class="modal fade modal-borderless" id="exampleModal" tabindex="-1"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <form action={{ route('teacher.store') }} method="POST" enctype="multipart/form-data">
-                                @csrf
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput" class="form-label">Hari</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder=""
-                                            name="days_id" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput" class="form-label"> Nama Guru</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder=""
-                                            name="name" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Jam Awal</label>
-                                        <input type="time" class="form-control" placeholder=""
-                                            name="hour_start" autocomplete="off" required>
-                                    </div>
-                                    
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Jam Akhir</label>
-                                        <input type="time" class="form-control" placeholder=""
-                                            name="hour_end" autocomplete="off" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Mapel</label>
-                                        <input type="text" class="form-control" placeholder=""
-                                            name="subject" autocomplete="off" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Ruangan</label>
-                                        <input type="text" class="form-control" placeholder=""
-                                            name="rooms_id" autocomplete="off" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Jurusan</label>
-                                        <input type="text" class="form-control" placeholder=""
-                                            name="majors_id" autocomplete="off" required>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-                                    <button type="submit" class="btn btn-primary">Edit Guru </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
                 <div class="card">
                     <div class="card-header">
-                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
                             Tambah Data
                         </button>
                     </div>
@@ -106,15 +51,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Graiden</td>
-                                    <td>vehicula.aliquet@semconsequat.co.uk</td>
-                                    <td>076 4820 8838</td>
-                                    <td>Offenburg</td>
-                                    <td>
-                                        <span class="badge bg-success">Active</span>
-                                    </td>
-                                </tr>
+                                @foreach ($teach as $t)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $t->name }}</td>
+                                        <td>{{ $t->hour_start }} - {{ $t->hour_end }}</td>
+                                        <td>{{ $t->subject }}</td>
+                                        <td>{{ $t->rooms_id }}</td>
+                                        <td>{{ $t->majors_id }}</td>
+                                        <td style="width: 100px;">
+                                            <!-- Button trigger modal -->
+                                            <button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $t->id }}"><i class="bi bi-eye-fill"></i></button>
+                                            <a class="btn shadow btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-visitor"{{ $t->id }}><i class="bi bi-trash-fill"></i></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 <tr>
                                     <td>Dale</td>
                                     <td>fringilla.euismod.enim@quam.ca</td>
