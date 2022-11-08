@@ -21,7 +21,7 @@
 <body>
     <div id="app">
         <div id="sidebar" class="active">
-            <div class="sidebar-wrapper active">
+            <div class="sidebar-wrapper active" style="background: linear-gradient(180deg, rgba(133,138,255,1) 0%, rgba(133,138,255,1) 35%, rgba(255,255,255,1) 100%);">
                 <div class="sidebar-header position-relative">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
@@ -66,7 +66,7 @@
                 </div>
                 <div class="sidebar-menu">
                     <ul class="menu">
-                        <li class="sidebar-title">Menu</li>
+                        <li class="sidebar-title" style="color: #ffffff;">Menu</li>
 
                         <li class="sidebar-item active ">
                             <a href="{{ url('/') }}" class='sidebar-link'>
