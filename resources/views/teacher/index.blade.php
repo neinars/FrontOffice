@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('main')
-@include('teacher.forms')
+    @include('teacher.forms')
     <div id="main">
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
@@ -13,7 +13,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-12 col-md-6 order-md-1 order-last">
-                        <h3>Data Guru / {{ $day->day }}</h3>
+                        <h3>Data Guru / {{ $day->name }}</h3>
                     </div>
                 </div>
             </div>
@@ -61,38 +61,16 @@
                                         <td>{{ $t->majors_id }}</td>
                                         <td style="width: 100px;">
                                             <!-- Button trigger modal -->
-                                            <button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $t->id }}"><i class="bi bi-eye-fill"></i></button>
-                                            <a class="btn shadow btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-visitor"{{ $t->id }}><i class="bi bi-trash-fill"></i></i></a>
+                                            <button class="btn btn-outline-success btn-sm" type="button"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalEditTeach{{ $t->id }}"><i
+                                                    class="bi bi-eye-fill"></i></button>
+                                            <a class="btn shadow btn-outline-danger btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#modalDeleteTeach{{ $t->id }}"><i
+                                                    class="bi bi-trash-fill"></i></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
-                                <tr>
-                                    <td>Dale</td>
-                                    <td>fringilla.euismod.enim@quam.ca</td>
-                                    <td>0500 527693</td>
-                                    <td>New Quay</td>
-                                    <td>
-                                        <span class="badge bg-success">Active</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Nathaniel</td>
-                                    <td>mi.Duis@diam.edu</td>
-                                    <td>(012165) 76278</td>
-                                    <td>Grumo Appula</td>
-                                    <td>
-                                        <span class="badge bg-danger">Inactive</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Emmanuel</td>
-                                    <td>eget.lacus.Mauris@feugiatSednec.org</td>
-                                    <td>(016977) 8208</td>
-                                    <td>Saint-Remy-Geest</td>
-                                    <td>
-                                        <span class="badge bg-success">Active</span>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
