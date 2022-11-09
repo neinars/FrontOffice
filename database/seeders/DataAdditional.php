@@ -6,6 +6,7 @@ use App\Models\Day;
 use Illuminate\Database\Seeder;
 use App\Models\Major;
 use App\Models\Room;
+use App\Models\Student;
 use App\Models\Teacher;
 
 
@@ -145,6 +146,12 @@ class DataAdditional extends Seeder
             'majors_id' => 1,
             'hour_start' => '12.12',
             'hour_end' => '15.00'
+        ]);
+
+        Student::create([
+            'name' => 'Nayara',
+            'nis' => '12345',
+            'majors_id' => 2,
         ]);
     }
 }

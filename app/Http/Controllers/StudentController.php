@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Major;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -14,10 +15,13 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('siswa');
+        $stud = Student::get();
+        $maj  = Major::get();
+        // dd($stud);
+        return view('student.index', compact('stud', 'maj'));
     }
 
-    /**
+    /** 
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -35,7 +39,13 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $stud = Student::create([
+            'name' => $request->name,
+            'nis' => $request->nis,
+            'majors_id' => $request->majors_id
+        ]);
+        // dd($stud);
+        return redirect()->back()->with('status', 'success')->with('data', $stud);
     }
 
     /**

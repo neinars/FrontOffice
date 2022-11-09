@@ -106,7 +106,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Kepentingan</label>
-                        <select name="utility_id" class="dataTable-selector form-select" required></select>
+                        <select name="utility_id" class="dataTable-selector form-select" required>
                         <option value="" selected="" disabled>-- Pilih --</option>
                         @foreach ($utility as $ut)
                             <option value="{{ $ut->id }}">{{ $ut->utilities }}</option>

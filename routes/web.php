@@ -30,3 +30,5 @@ Route::post('teacher/store', [\App\Http\Controllers\TeacherController::class, 's
 Route::delete('teacher/delete/{id}', [\App\Http\Controllers\TeacherController::class, 'destroy'])->name('teacher.delete');
 
 Route::get('siswa', [\App\Http\Controllers\StudentController::class, 'index'])->name('student.index');
+Route::post('siswa/store', [\App\Http\Controllers\StudentController::class, 'store'])->name('student.store');
+Route::delete('siswa/delete/{id}', [\App\Http\Controllers\StudentController::class, 'destroy'])->name('student.delete');

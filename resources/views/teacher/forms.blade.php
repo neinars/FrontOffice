@@ -57,14 +57,14 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-                    <button type="submit" class="btn btn-primary">Edit Guru </button>
+                    <button type="submit" class="btn btn-primary">Tambah Guru </button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-{{-- modal add data --}}
+{{-- modal show data --}}
 @foreach ($teach as $t)
     <div class="modal fade modal-borderless" id="modalEditTeach{{ $t->id }}" tabindex="-1"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
