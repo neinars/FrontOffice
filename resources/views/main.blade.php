@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('main')
-    <div id="main" style="background-color: #D4DDFF;">
+    <div id="main" style="background-color: #BAC9FF;">
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
                 <i class="bi bi-justify fs-3"></i>
@@ -25,12 +25,12 @@
                 <div class="col-12 col-lg-9">
                     <div class="row">
                         <div class="col-6 col-lg-6 col-md-6" >
-                            <div class="card" style="background: transparent">
-                                <div class="card-body px-4 py-4"style="background: linear-gradient(90deg, rgba(195,197,255,1) 0%, rgba(133,138,255,1) 33%); border-radius: 1rem;">
+                            <div class="card" style="background: transparent; ">
+                                <div class="card-body px-4 py-4"style="background: #98B5FF; border-radius: 1rem;">
                                     <div class="row">
                                         <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                             <div class="mb-2 me-2">
-                                                <img src="assets/images/gg_profile.png" alt="">
+                                                <img src="assets/images/gg_profile1.png" alt="">
                                             </div>
                                             <div>
                                                 <h6 class="text-muted font-semibold">Harian</h6>
@@ -43,11 +43,11 @@
                         </div>
                         <div class="col-6 col-lg-6 col-md-6">
                             <div class="card" style="background: transparent">
-                                <div class="card-body px-4 py-4" style="background: linear-gradient(90deg, rgba(195,197,255,1) 0%, rgba(133,138,255,1) 33%); border-radius: 1rem;">
+                                <div class="card-body px-4 py-4" style="background: #98B5FF; border-radius: 1rem;">
                                     <div class="row">
                                         <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                             <div class="mb-2 me-2">
-                                                <img src="assets/images/gg_profile.png" alt="">
+                                                <img src="assets/images/gg_profile2.png" alt="">
                                             </div>
                                             <div>
                                                 <h6 class="text-muted font-semibold">Harian</h6>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <div class="card" style="background: linear-gradient(180deg, rgba(211,213,255,1) 0%, rgba(160,164,255,1) 33%, rgba(133,138,255,1) 65%);">
+                            <div class="card" style="background: #98B5FF;">
                                 <div class="m-3">
                                     <h4>Kunjungan Profil</h4>
                                 </div>
@@ -74,10 +74,10 @@
                 </div>
                 <div class="col-12 col-lg-3">
                     <div class="card" style="background: transparent">
-                        <div class="card-body py-4 px-4" style="background: linear-gradient(90deg, rgba(195,197,255,1) 0%, rgba(133,138,255,1) 33%); border-radius: 1rem;">
+                        <div class="card-body py-4 px-4" style="background: #98B5FF; border-radius: 1rem;">
                             <div class="d-flex align-items-center">
                                 <div class="mb-2 me-2">
-                                    <img src="assets/images/gg_profile.png" alt="">
+                                    <img src="assets/images/gg_profile3.png" alt="">
                                 </div>
                                 <div class="ms-3 name">
                                     <h5 class="font-bold">Admin</h5>
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card" style="background: linear-gradient(90deg, rgba(211,213,255,1) 0%, rgba(160,164,255,1) 33%, rgba(133,138,255,1) 65%);">
+                    <div class="card" style="background: #98B5FF;">
                         <div class="m-3">
                             <h4>Profil Pengunjung</h4>
                         </div>
