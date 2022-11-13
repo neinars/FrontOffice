@@ -15,10 +15,10 @@ class Major extends Model
     ];
 
     public function teachers(){
-        return $this->belongsToMany(Teacher::class);
+        return $this->belongsToMany(Teacher::class, 'id');
     }
 
     public function students(){
-        return $this->hasMany(Student::class);
+        return $this->hasMany(Student::class,'id');
     }
 }

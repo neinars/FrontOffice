@@ -20,14 +20,17 @@ class Teacher extends Model
     ];
 
     public function days(){
-        return $this->belongsTo(Day::class);
+        return $this->belongsTo(Day::class, 'id');
     }
 
     public function rooms(){
-        return $this->belongsToMany(Room::class);
+        return $this->belongsToMany(Room::class, 'id', 'room_id');
     }
 
     public function majors(){
-        return $this->belongsToMany(Major::class);
+        return $this->belongsToMany(Major::class, 'id', 'major_id');
     }
 }
+//public function meet(){
+    // return $this->hasOne(Meet::class, 'id' , 'meet_id');
+// }
