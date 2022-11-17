@@ -14,5 +14,7 @@ class Room extends Model
         'num'
     ];
 
-    
+    public function teachers(){
+        return $this->belongsToMany(Teacher::class, 'id');
+    }
 }

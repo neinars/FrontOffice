@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Teacher;
 use App\Models\Day;
+use App\Models\Major;
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -13,13 +15,18 @@ class TeacherController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($hari)
     {
-        $day = Day::get();
-        $teach = Teacher::get();
-        return view('teacher.index', compact('day','teach'));
+        $day = Day::where('name', $hari)->first();
+        $dat = Day::get();
+        $rom = Room::get();
+        $maj = Major::get();
+        $teach = Teacher::where('days_id', $day->id)->get();
+        $teacher = Teacher::get();
+        // dd($teacher);
+        return view('teacher.index', compact('day','teach','dat','rom','maj', 'teacher'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -47,7 +54,7 @@ class TeacherController extends Controller
             'rooms_id' => $request->rooms_id,
             'majors_id' => $request->majors_id
         ]);
-        dd($teach);
+        // dd($teach);
         return redirect()->back()->with('status', 'Success')->with('data',$teach);
     }
 
@@ -82,7 +89,7 @@ class TeacherController extends Controller
      */
     public function update(Request $request, Teacher $teacher)
     {
-        //
+        // 
     }
 
     /**
@@ -91,8 +98,12 @@ class TeacherController extends Controller
      * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Teacher $teacher)
+    public function destroy(Teacher $teacher, $id)
     {
-        //
+        $teach = Teacher::find($id);
+
+        $teach->delete();
+
+        return redirect()->bacK();
     }
 }
