@@ -92,7 +92,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Nomor Telepon</label>
-                        <input type="number" min="1" class="form-control" placeholder="" name="phone_number"
+                        <input type="number" min="0" class="form-control" placeholder="" name="phone_number"
                             autocomplete="off" required>
                     </div>
                     <div class="mb-3">

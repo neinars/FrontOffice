@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body style="background: #BAC9FF">
     <div id="app">
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active" style="background: linear-gradient(180deg, rgba(152,181,255,1) 0%, rgba(180,197,255,1) 100%);">

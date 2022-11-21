@@ -24,7 +24,7 @@
             <section class="row">
                 <div class="col-12 col-lg-9">
                     <div class="row">
-                        <div class="col-6 col-lg-6 col-md-6" >
+                        <div class="col-6 col-lg-6 col-md-6">
                             <div class="card" style="background: transparent; ">
                                 <div class="card-body px-4 py-4"style="background: #98B5FF; border-radius: 1rem;">
                                     <div class="row">
@@ -34,7 +34,12 @@
                                             </div>
                                             <div>
                                                 <h6 class="text-muted font-semibold">Harian</h6>
-                                                <h6 class="font-extrabold mb-0">112.000</h6>
+                                                {{-- @foreach ($daily as $d)                                                     --}}
+                                                <h6 class="font-extrabold mb-0">
+                                                    @foreach ($daily as $d)
+                                                        {{ $d->created_at->format('d') }}
+                                                    @endforeach</h6>
+                                                {{-- @endforeach --}}
                                             </div>
                                         </div>
                                     </div>
@@ -106,5 +111,72 @@
 
     <!-- Need: Apexcharts -->
     <script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+    <script>
+        var optionsProfileVisit = {
+            annotations: {
+                position: "back",
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            chart: {
+                type: "bar",
+                height: 300,
+            },
+            fill: {
+                opacity: 1,
+            },
+            plotOptions: {},
+            series: [{
+                name: "Pengunjung",
+                data: [
+                    @foreach ($monthVisitor as $v)
+                        {{ $v }},
+                    @endforeach
+                ],
+            }, ],
+            colors: "#435ebe",
+            xaxis: {
+                categories: [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "Mei",
+                    "Jun",
+                    "Jul",
+                    "Agu",
+                    "Sep",
+                    "Okt",
+                    "Nov",
+                    "Des",
+                ],
+            },
+        }
+    </script>
+    <script>
+        let optionsVisitorsProfile = {
+            series: [
+                {{ $kepsek }}, {{ $tu }}, {{ $bp }}, {{ $staff_m }}, {{ $staff_tu }}, {{ $guru }}, {{ $guru_piket }}, {{ $dll }}
+            ],
+            labels: ["Kepala Sekolah", "TU", 'BP', 'Staff Management', 'Staff TU', 'Guru', 'Guru Piket', 'Dan lain-lain'],
+            colors: ["#435ebe", "#55c6e8"],
+            chart: {
+                type: "donut",
+                width: "100%",
+                height: "350px",
+            },
+            legend: {
+                position: "bottom",
+            },
+            plotOptions: {
+                pie: {
+                    donut: {
+                        size: "30%",
+                    },
+                },
+            },
+        }
+    </script>
     <script src="assets/js/pages/dashboard.js"></script>
 @endsection
