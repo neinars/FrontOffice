@@ -56,7 +56,7 @@ class VisitorController extends Controller
 
     public function pdf()
     {
-        $visitor = Visitor::all();
+        $visitor = Visitor::where('created_at')->orderBy('created_at', 'asc')->get();;
         $meet = Meet::all();
         $utility = Utility::all();
 
