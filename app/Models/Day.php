@@ -13,7 +13,7 @@ class Day extends Model
         'name'
     ];
 
-    public function teacher(){
+    public function teachers(){
         return $this->hasMany(Teacher::class);
     }
 }

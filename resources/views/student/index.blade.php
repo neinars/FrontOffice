@@ -37,12 +37,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($stud as $s)
+                                @foreach ($student as $s)
+                                {{-- @dd($s) --}}
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $s->name }}</td>
                                         <td>{{ $s->nis }}</td>
-                                        <td>{{ $s->majors_id }}</td>
+                                        <td>{{ $s->major->name }}</td>
                                         <td style="width: 100px;">
                                             <!-- Button trigger modal -->
                                             <button class="btn btn-outline-success btn-sm" type="button"

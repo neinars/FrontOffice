@@ -38,18 +38,18 @@
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Ruangan</label>
-                        <select name="rooms_id" class="dataTable-selector form-select" required>
+                        <select name="room_id" class="dataTable-selector form-select" required>
                             <option value="" selected="" disabled>-- Pilih --</option>
-                            @foreach ($rom as $r)
+                            @foreach ($room as $r)
                                 <option value="{{ $r->id }}">{{ $r->name }}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Jurusan</label>
-                        <select name="majors_id" class="dataTable-selector form-select" required>
+                        <select name="major_id" class="dataTable-selector form-select" required>
                             <option value="" selected="" disabled>-- Pilih --</option>
-                            @foreach ($maj as $m)
+                            @foreach ($major as $m)
                                 <option value="{{ $m->id }}">{{ $m->name }}</option>
                             @endforeach
                         </select>
@@ -107,7 +107,7 @@
                             <label for="formGroupExampleInput2" class="form-label">Ruangan</label>
                             <select name="rooms_id" class="dataTable-selector form-select" disabled>
                                 {{-- <option value="" selected="" disabled>-- Pilih --</option> --}}
-                                @foreach ($rom as $r)
+                                @foreach ($room as $r)
                                     <option value="{{ $r->id }}">{{ $r->name }}</option>
                                 @endforeach
                             </select>
@@ -116,7 +116,7 @@
                             <label for="formGroupExampleInput2" class="form-label">Jurusan</label>
                             <select name="majors_id" class="dataTable-selector form-select" disabled>
                                 {{-- <option value="" selected="" disabled>-- Pilih --</option> --}}
-                                @foreach ($maj as $m)
+                                @foreach ($major as $m)
                                     <option value="{{ $m->id }}">{{ $m->name }}</option>
                                 @endforeach
                             </select>

@@ -16,14 +16,14 @@
                         </div>
                         <div class="mb-3">
                             <label for="formGroupExampleInput2" class="form-label">NIS</label>
-                            <input type="text" class="form-control" placeholder="" name="nis" autocomplete="off"
+                            <input type="number" class="form-control" placeholder="" name="nis" autocomplete="off"
                                 required>
                         </div>
                         <div class="mb-3">
                             <label for="formGroupExampleInput2" class="form-label">Jurusan</label>
-                            <select name="majors_id" class="dataTable-selector form-select" required>
+                            <select name="major_id" class="dataTable-selector form-select" required>
                                 <option value="" selected="" disabled>-- Pilih --</option>
-                                @foreach ($maj as $m)
+                                @foreach ($major as $m)
                                     <option value="{{ $m->id }}">{{ $m->name }}</option>
                                 @endforeach
                             </select>

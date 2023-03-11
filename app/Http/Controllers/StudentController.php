@@ -15,10 +15,10 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $stud = Student::get();
-        $maj  = Major::get();
-        // dd($stud);
-        return view('student.index', compact('stud', 'maj'));
+        $student = Student::all();
+        $major  = Major::get();
+        // dd($);
+        return view('student.index', compact('student', 'major'));
     }
 
     /** 
@@ -42,7 +42,7 @@ class StudentController extends Controller
         $stud = Student::create([
             'name' => $request->name,
             'nis' => $request->nis,
-            'majors_id' => $request->majors_id
+            'major_id' => $request->major_id
         ]);
         // dd($stud);
         return redirect()->back()->with('status', 'success')->with('data', $stud);

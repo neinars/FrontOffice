@@ -14,11 +14,14 @@ class Major extends Model
         'class'
     ];
 
+    protected $primaryKey = 'major_id';
+
+
     public function teachers(){
-        return $this->belongsToMany(Teacher::class, 'id');
+        return $this->belongsToMany(Teacher::class, 'id', 'teacher_id');
     }
 
-    public function students(){
-        return $this->hasMany(Student::class,'id');
+    public function student(){
+        return $this->belongsTo(Student::class, 'id', 'student_id');
     }
 }

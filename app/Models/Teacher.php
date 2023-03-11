@@ -15,8 +15,8 @@ class Teacher extends Model
         'hour_end',
         'subject',
         'days_id',
-        'rooms_id',
-        'majors_id'
+        'room_id',
+        'major_id'
     ];
 
     public function days(){

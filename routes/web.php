@@ -27,7 +27,7 @@ Route::delete('visitor/delete/{id}', [\App\Http\Controllers\VisitorController::c
 
 
 
-Route::get('teacher/{hari}', [\App\Http\Controllers\TeacherController::class, 'index'])->name('teacher.days');
+Route::get('teacher/{hari}', [\App\Http\Controllers\TeacherController::class, 'teacher'])->name('teacher.days');
 Route::post('teacher/store', [\App\Http\Controllers\TeacherController::class, 'store'])->name('teacher.store'); 
 Route::delete('teacher/delete/{id}', [\App\Http\Controllers\TeacherController::class, 'destroy'])->name('teacher.delete');
 

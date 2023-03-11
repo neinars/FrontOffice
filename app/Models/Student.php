@@ -12,10 +12,11 @@ class Student extends Model
     protected $fillable =[
         'name',
         'nis',
-        'majors_id'
+        'major_id'
     ];
 
+
     public function major(){
-        return $this->belongsTo(Major::class);
+        return $this->hasOne(Major::class, 'id', 'major_id');
     }
 }

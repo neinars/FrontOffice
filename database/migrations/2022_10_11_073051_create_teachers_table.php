@@ -18,8 +18,8 @@ class CreateTeachersTable extends Migration
             $table->string('name');
             $table->string('subject');
             $table->foreignId('days_id')->constrained()->nullable();
-            $table->foreignId('rooms_id')->constrained();
-            $table->foreignId('majors_id')->constrained();
+            $table->foreignId('room_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('major_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('hour_start');
             $table->string('hour_end');
             $table->timestamps();

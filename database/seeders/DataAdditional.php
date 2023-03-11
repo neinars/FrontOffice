@@ -142,8 +142,8 @@ class DataAdditional extends Seeder
             'name' => 'Bpk. Mujahid',
             'subject' => 'Pemrograman Dasar',
             'days_id' => 1,
-            'rooms_id' => 1,
-            'majors_id' => 1,
+            'room_id' => 1,
+            'major_id' => 1,
             'hour_start' => '12.12',
             'hour_end' => '15.00'
         ]);
@@ -151,7 +151,7 @@ class DataAdditional extends Seeder
         Student::create([
             'name' => 'Nayara',
             'nis' => '12345',
-            'majors_id' => 2,
+            'major_id' => 2,
         ]);
     }
 }

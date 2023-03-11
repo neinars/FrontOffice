@@ -39,7 +39,7 @@ class HomeController extends Controller
         //     // dd($meet->kepsek->meet_with);
         // }
         foreach( $daily as $d)
-        dd($d);
+        // dd($d);
 
         // foreach($daily as $d)
         for ($i=1; $i <= 12; $i++){

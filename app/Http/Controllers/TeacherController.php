@@ -15,16 +15,16 @@ class TeacherController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($hari)
+    public function teacher($hari)
     {
         $day = Day::where('name', $hari)->first();
-        $dat = Day::get();
-        $rom = Room::get();
-        $maj = Major::get();
+        // $dat = Day::get();
+        $room = Room::get();
+        $major = Major::get();
         $teach = Teacher::where('days_id', $day->id)->get();
         $teacher = Teacher::get();
         // dd($teacher);
-        return view('teacher.index', compact('day','teach','dat','rom','maj', 'teacher'));
+        return view('teacher.index', compact('day','teach','room','major', 'teacher'));
     }
     
     /**
@@ -51,8 +51,8 @@ class TeacherController extends Controller
             'hour_end' => $request->hour_end,
             'subject' => $request->subject,
             'days_id' => $request->days_id,
-            'rooms_id' => $request->rooms_id,
-            'majors_id' => $request->majors_id
+            'room_id' => $request->room_id,
+            'major_id' => $request->major_id
         ]);
         // dd($teach);
         return redirect()->back()->with('status', 'Success')->with('data',$teach);
