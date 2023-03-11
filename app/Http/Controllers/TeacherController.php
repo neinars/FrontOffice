@@ -21,7 +21,7 @@ class TeacherController extends Controller
         // $dat = Day::get();
         $room = Room::get();
         $major = Major::get();
-        $teach = Teacher::where('days_id', $day->id)->get();
+        $teach = Teacher::where('days_id', $day->id)->with('room')->with('major')->get();
         $teacher = Teacher::get();
         // dd($teacher);
         return view('teacher.index', compact('day','teach','room','major', 'teacher'));

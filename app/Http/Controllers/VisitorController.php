@@ -56,7 +56,7 @@ class VisitorController extends Controller
 
     public function pdf()
     {
-        $visitor = Visitor::where('created_at')->orderBy('created_at', 'asc')->get();;
+        $visitor = Visitor::where('created_at')->orderBy('created_at', 'asc')->get();
         $meet = Meet::all();
         $utility = Utility::all();
 
@@ -64,7 +64,7 @@ class VisitorController extends Controller
         // return $pdf->download('Laporan-Kunjungan');
 
         $pdf = new Dompdf();
-        $pdf->loadHtml(view('recap', [$visitor, $meet, $utility]));
+        $pdf->loadHtml(view('recap', ['visitor' => $visitor, 'meet' => $meet,'utility' => $utility]));
 
         $pdf->setPaper('A4', 'landscape');
 

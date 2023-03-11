@@ -33,7 +33,13 @@
                             data-bs-target="#exampleModal">
                             Tambah Data
                         </button>
-                        <a href="{{ url('visitor/pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModals">
+                            Launch demo modal
+                        </button>
+
+                        {{-- <a </a> --}}
                     </div>
 
                     <div class="card-body">

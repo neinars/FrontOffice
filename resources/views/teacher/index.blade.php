@@ -39,14 +39,14 @@
                             </thead>
                             <tbody>
                                 @foreach ($teach as $t)
-                                {{-- @dd($t->major->id  ) --}}
+                                @dd($t->room)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $t->name }}</td>
                                         <td>{{ $t->hour_start }} - {{ $t->hour_end }}</td>
                                         <td>{{ $t->subject }}</td>
-                                        <td>{{ $t->room_id }}</td>
-                                        <td>{{ $t->major_id }}</td>
+                                        <td>{{ $t->room->name }}</td>
+                                        <td>{{ $t->major->name }}</td>
                                         <td style="width: 100px;">
                                             <!-- Button trigger modal -->
                                             <button class="btn btn-outline-success btn-sm" type="button"

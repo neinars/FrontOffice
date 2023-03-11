@@ -23,14 +23,11 @@ class Teacher extends Model
         return $this->belongsTo(Day::class, 'id');
     }
 
-    public function rooms(){
+    public function room(){
         return $this->hasMany(Room::class, 'id', 'room_id');
     }
 
-    public function majors(){
+    public function major(){
         return $this->hasMany(Major::class, 'id', 'major_id');
     }
 }
-//public function meet(){
-    // return $this->hasOne(Meet::class, 'id' , 'meet_id');
-// }
