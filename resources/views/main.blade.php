@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('main')
-    <div id="main">
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
                 <i class="bi bi-justify fs-3"></i>
@@ -96,15 +95,4 @@
                 </div>
             </section>
         </div>
-
-        @yield('main')
-
-    </div>
-
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/app.js"></script>
-
-    <!-- Need: Apexcharts -->
-    <script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/js/pages/dashboard.js"></script>
 @endsection
