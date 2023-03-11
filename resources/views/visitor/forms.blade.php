@@ -5,25 +5,53 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Informations</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Informasi</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                          <label for="inputEmail4" class="form-label">Tanggal Kedatangan</label>
+                          <input type="email" class="form-control" id="inputEmail4" value="{{ $t->created_at->format('d-m-Y ') }}" readonly>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputPassword4" class="form-label">Nama</label>
+                          <input type="text" class="form-control" id="inputPassword4" value="{{ $t->name }}" readonly>
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress" class="form-label">Alamat</label>
+                          <input type="text" class="form-control" id="inputAddress" value="{{ $t->address }}" readonly>
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress2" class="form-label">Alamat Instansi</label>
+                          <input type="text" class="form-control" id="inputAddress2" value="{{ $t->instance }}" readonly>
+                        </div>
+                        <div class="col-12">
+                          <label for="inputCity" class="form-label">Nomor Telepon</label>
+                          <input type="text" class="form-control" id="inputCity" value="{{ $t->phone_number }}" readonly>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputZip" class="form-label">Bertemu Dengan</label>
+                          <input type="text" class="form-control" id="inputZip" value="{{ $t->meet->meet_with }}">
+                        </div> 
+                        <div class="col-md-6">
+                            <label for="inputZip" class="form-label">Kepentingan</label>
+                            <input type="text" class="form-control" id="inputZip" value="{{ $t->utility->utilities }}">
+                          </div> 
+                          <div class="col-12">
+                            <label for="inputZip" class="form-label">Keterangan</label>
+                            <input type="textarea" class="form-control" id="inputZip" value="{{ $t->desc }}">
+                          </div>                    
+                      </form>
                     <table>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $t->created_at }}</td>
-                        <td>{{ $t->name }}</td>
-                        <td>{{ $t->address }}</td>
-                        <td>{{ $t->instance }}</td>
-                        <td>{{ $t->phone_number }}</td>
-                        <td>{{ $t->meet->meet_with }}</td>
-                        <td>{{ $t->utility->utilities }}</td>
-                        <td>{{ $t->desc }}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </table>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>

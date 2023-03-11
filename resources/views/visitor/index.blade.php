@@ -2,7 +2,7 @@
 
 @section('main')
     @include('visitor.forms')
-    <div id="main" style="background-color: #BAC9FF;">
+    <div id="main">
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
                 <i class="bi bi-justify fs-3"></i>
@@ -30,10 +30,11 @@
                 {{-- @include('visitor.forms') --}}
                 <div class="card">
                     <div class="card-header">
-                        <button class="btn btn-primary" type="button" data-bs-toggle="modal"
+                        <button class="btn btn-secondary" style="background: #224761" type="button" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             Tambah Data
                         </button>
+                        <a href="{{ url('visitor/pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a>
                     </div>
 
                     <div class="card-body">
@@ -55,7 +56,7 @@
                                 @foreach ($tdata as $t)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $t->created_at }}</td>
+                                        <td>{{ $t->created_at->format('d-m-Y') }}</td>
                                         <td>{{ $t->name }}</td>
                                         <td>{{ $t->address }}</td>
                                         <td>{{ $t->instance }}</td>

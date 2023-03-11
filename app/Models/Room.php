@@ -14,7 +14,7 @@ class Room extends Model
         'num'
     ];
 
-    public function teachers(){
-        return $this->belongsToMany(Teacher::class, 'id', 'teacher_id');
+    public function teacher(){
+        return $this->belongsTo(Teacher::class, 'id', 'teacher_id');
     }
 }

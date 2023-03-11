@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('main')
-    <div id="main" style="background-color: #BAC9FF;">
+    <div id="main">
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
                 <i class="bi bi-justify fs-3"></i>
@@ -26,14 +26,14 @@
                     <div class="row">
                         <div class="col-6 col-lg-6 col-md-6">
                             <div class="card" style="background: transparent; ">
-                                <div class="card-body px-4 py-4"style="background: #98B5FF; border-radius: 1rem;">
+                                <div class="card-body px-4 py-4"style="background: #FFFDEC; border-radius: 1rem;">
                                     <div class="row">
                                         <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                             <div class="mb-2 me-2">
                                                 <img src="assets/images/gg_profile1.png" alt="">
                                             </div>
                                             <div>
-                                                <h6 class="text-muted font-semibold">Harian</h6>
+                                                <h6 class="font-semibold">Harian</h6>
                                                 {{-- @foreach ($daily as $d)                                                     --}}
                                                 <h6 class="font-extrabold mb-0">
                                                     @foreach ($daily as $d)
@@ -48,7 +48,7 @@
                         </div>
                         <div class="col-6 col-lg-6 col-md-6">
                             <div class="card" style="background: transparent">
-                                <div class="card-body px-4 py-4" style="background: #98B5FF; border-radius: 1rem;">
+                                <div class="card-body px-4 py-4" style="background: #FFFDEC; border-radius: 1rem;">
                                     <div class="row">
                                         <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                             <div class="mb-2 me-2">
@@ -66,7 +66,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <div class="card" style="background: #98B5FF;">
+                            <div class="card" style="background: #FFFDEC;">
                                 <div class="m-3">
                                     <h4>Kunjungan Profil</h4>
                                 </div>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="col-12 col-lg-3">
                     <div class="card" style="background: transparent">
-                        <div class="card-body py-4 px-4" style="background: #98B5FF; border-radius: 1rem;">
+                        <div class="card-body py-4 px-4" style="background: #FFFDEC; border-radius: 1rem;">
                             <div class="d-flex align-items-center">
                                 <div class="mb-2 me-2">
                                     <img src="assets/images/gg_profile3.png" alt="">
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card" style="background: #98B5FF;">
+                    <div class="card" style="background: #FFFDEC;">
                         <div class="m-3">
                             <h4>Profil Pengunjung</h4>
                         </div>
@@ -135,7 +135,7 @@
                     @endforeach
                 ],
             }, ],
-            colors: "#435ebe",
+            colors: "#224761",
             xaxis: {
                 categories: [
                     "Jan",

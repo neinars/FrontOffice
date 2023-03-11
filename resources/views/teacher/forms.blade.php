@@ -87,7 +87,7 @@
                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder=""
                                 name="name" value="{{ $t->name }}" disabled>
                         </div>
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <label for="formGroupExampleInput2" class="form-label">Jam Awal</label>
                             <input type="time" class="form-control" placeholder="" name="hour_start"
                                 autocomplete="off" value="{{ $t->hour_start }}" disabled>
@@ -97,7 +97,7 @@
                             <label for="formGroupExampleInput2" class="form-label">Jam Akhir</label>
                             <input type="time" class="form-control" placeholder="" name="hour_end"
                                 autocomplete="off" value="{{ $t->hour_end }}" disabled>
-                        </div>
+                        </div> --}}
                         <div class="mb-3">
                             <label for="formGroupExampleInput2" class="form-label">Mapel</label>
                             <input type="text" class="form-control" placeholder="" name="subject"

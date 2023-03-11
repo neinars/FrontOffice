@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Front Office</title>
+    <title>Front Office</title>
 
     <link rel="stylesheet" href="{{ asset('assets/css/main/app.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main/app-dark.css') }}">
@@ -18,18 +18,18 @@
 
 </head>
 
-<body style="background: #BAC9FF">
+<body style="background: #FFF">
     <div id="app">
-        <div id="sidebar" class="active">
-            <div class="sidebar-wrapper active" style="background: linear-gradient(180deg, rgba(152,181,255,1) 0%, rgba(180,197,255,1) 100%);">
+        <div id="sidebar" class="active" >
+            <div class="sidebar-wrapper active" style="background: #224761">
                 <div class="sidebar-header position-relative">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
-                            <h4>FrontOffice</h4>
+                            <h4 style="color: white">FrontOffice</h4>
                             {{-- <a href="index.html"><img src="assets/images/logo/logorpl3.jpeg" alt="Logo"
                                     srcset=""></a> --}}
                         </div>
-                        <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
+                        {{-- <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20"
                                 height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
@@ -61,69 +61,56 @@
                         <div class="sidebar-toggler  x">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i
                                     class="bi bi-x bi-middle"></i></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="sidebar-menu">
                     <ul class="menu">
-                        <li class="sidebar-title" style="color: #ffffff;">Menu</li>
+                        <li class="sidebar-title" style="color: white">Menu</li>
 
-                        <li class="sidebar-item active ">
+                        <li class="sidebar-item {{ (request()->is('/')) ? 'sidebar-item active' : '' }} ">
                             <a href="{{ url('/') }}" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
-                                <span>Dashboard</span>
+                                <span style="color: white">Dashboard</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item  ">
+                        <li class="sidebar-item {{ (request()->is('visitor')) ? 'sidebar-item active' : '' }} ">
                             <a href="{{ url('/visitor') }}" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Buku Tamu</span>
+                                <span style="color: white">Buku Tamu</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-collection-fill"></i>
-                                <span>Data Guru</span>
+                                <span style="color: white">Data Guru</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="{{ url('teacher/senin') }}">Senin</a>
+                                    <a href="{{ url('teacher/senin') }}" style="color: white">Senin</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="{{ url('teacher/selasa') }}">Selasa</a>
+                                    <a href="{{ url('teacher/selasa') }}" style="color: white">Selasa</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="{{ url('teacher/rabu') }}">Rabu</a>
+                                    <a href="{{ url('teacher/rabu') }}" style="color: white">Rabu</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="{{ url('teacher/kamis') }}">Kamis</a>
+                                    <a href="{{ url('teacher/kamis') }}" style="color: white">Kamis</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="{{ url('teacher/jumat') }}">Jumat</a>
+                                    <a href="{{ url('teacher/jumat') }}" style="color: white">Jumat</a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="sidebar-item ">
+                        <li class="sidebar-item {{ (request()->is('siswa')) ? 'sidebar-item active' : '' }} ">
                             <a href="{{ url('/siswa') }}" class='sidebar-link'>
                                 <i class="bi bi-grid-1x2-fill"></i>
-                                <span>Data Siswa</span>
+                                <span style="color: white">Data Siswa</span>
                             </a>
-                            {{-- <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="{{ url('/teacher') }}">Rekayasa Perangkat Lunak</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="{{ url('/teacher') }}">Bisnis Daring Pemasaran</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="{{ url('/teacher') }}">Akutansi Keuangan Lembaga</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="{{ url('/teacher') }}">Otomatisasi Tata Kelola Perkantoran</a>
-                                </li> --}}
                         </li>
                     </ul>
                 </div>

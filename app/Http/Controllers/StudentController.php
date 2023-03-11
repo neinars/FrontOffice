@@ -88,8 +88,11 @@ class StudentController extends Controller
      * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Student $student)
+    public function destroy(Student $student, $id)
     {
-        //
+        $student = Student::find($id);
+        $student->delete();
+        // dd($visitor);
+        return redirect()->back();
     }
 }

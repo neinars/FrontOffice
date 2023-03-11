@@ -24,11 +24,11 @@ class Teacher extends Model
     }
 
     public function rooms(){
-        return $this->belongsToMany(Room::class, 'id', 'room_id');
+        return $this->hasMany(Room::class, 'id', 'room_id');
     }
 
     public function majors(){
-        return $this->belongsToMany(Major::class, 'id', 'major_id');
+        return $this->hasMany(Major::class, 'id', 'major_id');
     }
 }
 //public function meet(){

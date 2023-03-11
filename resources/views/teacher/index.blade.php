@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('main')
-    <div id="main" style="background-color: #BAC9FF;">
+    <div id="main">
         @include('teacher.forms')
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
@@ -40,13 +40,13 @@
                             </thead>
                             <tbody>
                                 @foreach ($teach as $t)
-                                {{-- @dd($t->major->id) --}}
+                                {{-- @dd($t->major->id  ) --}}
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $t->name }}</td>
                                         <td>{{ $t->hour_start }} - {{ $t->hour_end }}</td>
                                         <td>{{ $t->subject }}</td>
-                                        <td>{{ $t->room->name }}</td>
+                                        <td>{{ $t->room_id }}</td>
                                         <td>{{ $t->major_id }}</td>
                                         <td style="width: 100px;">
                                             <!-- Button trigger modal -->
