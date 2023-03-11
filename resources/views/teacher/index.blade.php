@@ -17,7 +17,7 @@
                 </div>
             </div>
             <section class="section">
-                <div class="card">
+                <div class="card" style="background: #FFFDEC;">
                     <div class="card-header">
                         <button class="btn btn-primary" type="button" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
@@ -39,14 +39,18 @@
                             </thead>
                             <tbody>
                                 @foreach ($teach as $t)
-                                @dd($t->room)
+                                {{-- @dd($t->major->name) --}}
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $t->name }}</td>
                                         <td>{{ $t->hour_start }} - {{ $t->hour_end }}</td>
                                         <td>{{ $t->subject }}</td>
-                                        <td>{{ $t->room->name }}</td>
-                                        <td>{{ $t->major->name }}</td>
+                                        @foreach ($t->room as $r)
+                                        <td>{{ $r->name }}</td>
+                                        @endforeach
+                                        @foreach ($t->major as $m)
+                                        <td>{{ $m->name }}</td>
+                                        @endforeach
                                         <td style="width: 100px;">
                                             <!-- Button trigger modal -->
                                             <button class="btn btn-outline-success btn-sm" type="button"

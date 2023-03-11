@@ -36,13 +36,12 @@
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#exampleModals">
-                            Launch demo modal
+                            Cetak Laporan
                         </button>
 
-                        {{-- <a </a> --}}
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body" style="background: #FFFDEC;">
                         <table class="table table-striped" id="table1">
                             <thead>
                                 <tr>

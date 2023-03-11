@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Barryvdh\DomPDF\PDF;
 use Dompdf\Dompdf;
+use Facade\FlareClient\View;
 
 class VisitorController extends Controller
 {
@@ -54,17 +55,22 @@ class VisitorController extends Controller
         return redirect()->back();
     }
 
-    public function pdf()
+    public function pdf(Request $request)
     {
-        $visitor = Visitor::where('created_at')->orderBy('created_at', 'asc')->get();
+        
+        // $visitor = Visitor::orderBy('created_at')->get();
         $meet = Meet::all();
         $utility = Utility::all();
+
+        $count = Carbon::today();
+        $visitor = Visitor::whereDate('created_at', $count)->get();
+        $tanggal = $request->created_at;
 
         // $pdf->loadHtml(view('recap', ['visitor' => $visitor, 'meet' => $meet,'utility' => $utility]));
         // return $pdf->download('Laporan-Kunjungan');
 
         $pdf = new Dompdf();
-        $pdf->loadHtml(view('recap', ['visitor' => $visitor, 'meet' => $meet,'utility' => $utility]));
+        $pdf->loadHtml(view('recap', compact('visitor','count', 'tanggal')));
 
         $pdf->setPaper('A4', 'landscape');
 

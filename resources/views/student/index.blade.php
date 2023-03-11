@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <section class="section">
+            <section class="section" >
                 <div class="card">
                     <div class="card-header">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
@@ -25,7 +25,7 @@
                             Tambah Data 
                         </button>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="background: #FFFDEC;">
                         <table class="table table-striped" id="table1">
                             <thead>
                                 <tr>

@@ -43,51 +43,66 @@
     <br/>
 
     <h3 style="text-align: center; font-family:sans-serif;"><span class="border border-dark">LAPORAN KUNJUNGAN</span></h3>
-    {{-- @foreach($visitor as $t) --}}
-    <div class="container">
-
-        <form class="row g-3">
+    {{-- @foreach($visitor as $t)
+    <form class="row g-3">
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Tanggal Kedatangan</label>
-              <input type="email" class="form-control" id="inputEmail4" value="{{-- $t->created_at->format('d-m-Y') --}}" readonly>
+              <input type="email" class="form-control" id="inputEmail4" value="{{ $t->created_at->format('d-m-Y ') }}" readonly>
             </div>
             <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Nama</label>
-                <input type="text" class="form-control" id="inputPassword4" value="{{-- $t->name --}}" readonly>
+              <label for="inputPassword4" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="inputPassword4" value="{{ $t->name }}" readonly>
             </div>
             <div class="col-12">
               <label for="inputAddress" class="form-label">Alamat</label>
-              <input type="text" class="form-control" id="inputAddress" value="{{-- $t->address --}}" readonly>
+              <input type="text" class="form-control" id="inputAddress" value="{{ $t->address }}" readonly>
             </div>
             <div class="col-12">
-                <label for="inputAddress2" class="form-label">Alamat Instansi</label>
-                <input type="text" class="form-control" id="inputAddress2" value="{{-- $t->instance --}}" readonly>
+              <label for="inputAddress2" class="form-label">Alamat Instansi</label>
+              <input type="text" class="form-control" id="inputAddress2" value="{{ $t->instance }}" readonly>
             </div>
             <div class="col-12">
-                <label for="inputCity" class="form-label">Nomor Telepon</label>
-                <input type="text" class="form-control" id="inputCity" value="{{-- $t->phone_number --}}" readonly>
+              <label for="inputCity" class="form-label">Nomor Telepon</label>
+              <input type="text" class="form-control" id="inputCity" value="{{ $t->phone_number }}" readonly>
             </div>
             <div class="col-md-6">
-                <label for="inputZip" class="form-label">Bertemu Dengan</label>
-                <input type="text" class="form-control" id="inputZip" value="{{-- $t->meet->meet_with --}}">
+              <label for="inputZip" class="form-label">Bertemu Dengan</label>
+              <input type="text" class="form-control" id="inputZip" value="{{ $t->meet->meet_with }}">
             </div> 
             <div class="col-md-6">
                 <label for="inputZip" class="form-label">Kepentingan</label>
-                <input type="text" class="form-control" id="inputZip" value="{{-- $t->utility->utilities --}}">
+                <input type="text" class="form-control" id="inputZip" value="{{ $t->utility->utilities }}">
               </div> 
               <div class="col-12">
                 <label for="inputZip" class="form-label">Keterangan</label>
-                <input type="textarea" class="form-control" id="inputZip" value="{{-- $t->desc --}}">
-            </div>                    
-        </form>
-        <table>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </table>
+                <input type="textarea" class="form-control" id="inputZip" value="{{ $t->desc }}">
+              </div>                    
+          </form>
     </div>
-    {{-- @endforeach --}}
+    @endforeach --}}
+  
+    <table class='table table-bordered center' >
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Nama</th>
+                <th>Tanggal Kehadiran</th>
+                <th>ALamat</th>
+                <th>Alamat Instansi</th>
+                <th>Nomor Telepon</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($visitor as $p)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $p->name }}</td>
+                    <td>{{ $p->created_at->format('d-m-Y') }}</td>
+                    <td>{{ $p->address }}</td>
+                    <td>{{ $p->instance }}</td>
+                    <td>{{ $p->phone_number }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
     
-    
-</div>

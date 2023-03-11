@@ -165,8 +165,7 @@
         </div>
         <div class="modal-body">
             <label for="formGroupExampleInput2" class="form-label">Tanggal</label>
-            <input type="date" class="form-control" id="formGroupExampleInput2" placeholder=""
-                name="tanggal" required>
+            <input class="form-control" type="date" name="created_at" id="" required>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -175,3 +174,4 @@
       </div>
     </div>
   </div>
+  

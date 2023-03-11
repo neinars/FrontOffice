@@ -24,9 +24,10 @@
             <div class="sidebar-wrapper active" style="background: #224761">
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
-                        <div class="logo">
+                        {{-- <div class="logo">
                             <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
-                        </div>
+                        </div> --}}
+                        <h4 style="color:#FFF"> FrontOffice</h4>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                         </div>
