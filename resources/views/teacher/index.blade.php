@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('main')
-    <div id="main">
         @include('teacher.forms')
         <header class="mb-3">
             <a href="#" class="burger-btn d-block d-xl-none">
@@ -66,5 +65,4 @@
                 </div>
             </section>
         </div>
-    </div>
 @endsection
