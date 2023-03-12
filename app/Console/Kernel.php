@@ -16,6 +16,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        $schedule->call(function () {
+            // Skrip penghitungan total pengunjung perbulan
+        })->monthlyOn(1, '00:00');
     }
 
     /**
@@ -29,4 +32,6 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
+
+    
 }

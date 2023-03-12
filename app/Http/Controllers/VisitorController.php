@@ -23,9 +23,16 @@ class VisitorController extends Controller
         $tdata = Visitor::orderBy('created_at', 'DESC')->get();
         $meet = Meet::get();
         $utility = Utility::get();
+        $start = \Carbon\Carbon::today(); // Mendapatkan tanggal hari ini
+        $end = $start->copy()->addDay(); // Menambahkan 1 hari ke tanggal hari ini
+
+        $total = Visitor::whereBetween('date', [
+            $start,
+            $end,
+        ])->count();
 
         // dd($t);
-        return view('visitor.index', compact('tdata', 'meet', 'utility'));
+        return view('visitor.index', compact('tdata', 'meet', 'utility', 'total'));
     }
 
     public function store(Request $request)
@@ -38,6 +45,7 @@ class VisitorController extends Controller
             'meet_id' => $request->meet_id,
             'utility_id' => $request->utility_id,
             'desc' => $request->desc,
+            'date' => Carbon::now(),
         ]);
 
         // dd($tdata);
@@ -57,20 +65,15 @@ class VisitorController extends Controller
 
     public function pdf(Request $request)
     {
-        
-        // $visitor = Visitor::orderBy('created_at')->get();
-        $meet = Meet::all();
-        $utility = Utility::all();
+        $date = $request->input('date');
 
-        $count = Carbon::today();
-        $visitor = Visitor::whereDate('created_at', $count)->get();
-        $tanggal = $request->created_at;
-
-        // $pdf->loadHtml(view('recap', ['visitor' => $visitor, 'meet' => $meet,'utility' => $utility]));
-        // return $pdf->download('Laporan-Kunjungan');
+        if (!$date) {
+            $date = now()->toDateString();
+        }
+        $visitors = Visitor::whereDate('date', $date)->get();
 
         $pdf = new Dompdf();
-        $pdf->loadHtml(view('recap', compact('visitor','count', 'tanggal')));
+        $pdf->loadHtml(view('recap', compact('visitors')));
 
         $pdf->setPaper('A4', 'landscape');
 

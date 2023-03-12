@@ -11,38 +11,44 @@
                 <div class="modal-body">
                     <form class="row g-3">
                         <div class="col-md-6">
-                          <label for="inputEmail4" class="form-label">Tanggal Kedatangan</label>
-                          <input type="email" class="form-control" id="inputEmail4" value="{{ $t->created_at->format('d-m-Y ') }}" readonly>
+                            <label for="inputEmail4" class="form-label">Tanggal Kedatangan</label>
+                            <input type="email" class="form-control" id="inputEmail4"
+                                value="{{ $t->created_at->format('d-m-Y ') }}" readonly>
                         </div>
                         <div class="col-md-6">
-                          <label for="inputPassword4" class="form-label">Nama</label>
-                          <input type="text" class="form-control" id="inputPassword4" value="{{ $t->name }}" readonly>
+                            <label for="inputPassword4" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="inputPassword4" value="{{ $t->name }}"
+                                readonly>
                         </div>
                         <div class="col-12">
-                          <label for="inputAddress" class="form-label">Alamat</label>
-                          <input type="text" class="form-control" id="inputAddress" value="{{ $t->address }}" readonly>
+                            <label for="inputAddress" class="form-label">Alamat</label>
+                            <input type="text" class="form-control" id="inputAddress" value="{{ $t->address }}"
+                                readonly>
                         </div>
                         <div class="col-12">
-                          <label for="inputAddress2" class="form-label">Alamat Instansi</label>
-                          <input type="text" class="form-control" id="inputAddress2" value="{{ $t->instance }}" readonly>
+                            <label for="inputAddress2" class="form-label">Alamat Instansi</label>
+                            <input type="text" class="form-control" id="inputAddress2" value="{{ $t->instance }}"
+                                readonly>
                         </div>
                         <div class="col-12">
-                          <label for="inputCity" class="form-label">Nomor Telepon</label>
-                          <input type="text" class="form-control" id="inputCity" value="{{ $t->phone_number }}" readonly>
+                            <label for="inputCity" class="form-label">Nomor Telepon</label>
+                            <input type="text" class="form-control" id="inputCity" value="{{ $t->phone_number }}"
+                                readonly>
                         </div>
                         <div class="col-md-6">
-                          <label for="inputZip" class="form-label">Bertemu Dengan</label>
-                          <input type="text" class="form-control" id="inputZip" value="{{ $t->meet->meet_with }}">
-                        </div> 
+                            <label for="inputZip" class="form-label">Bertemu Dengan</label>
+                            <input type="text" class="form-control" id="inputZip" value="{{ $t->meet->meet_with }}">
+                        </div>
                         <div class="col-md-6">
                             <label for="inputZip" class="form-label">Kepentingan</label>
-                            <input type="text" class="form-control" id="inputZip" value="{{ $t->utility->utilities }}">
-                          </div> 
-                          <div class="col-12">
+                            <input type="text" class="form-control" id="inputZip"
+                                value="{{ $t->utility->utilities }}">
+                        </div>
+                        <div class="col-12">
                             <label for="inputZip" class="form-label">Keterangan</label>
                             <input type="textarea" class="form-control" id="inputZip" value="{{ $t->desc }}">
-                          </div>                    
-                      </form>
+                        </div>
+                    </form>
                     <table>
                         <td></td>
                         <td></td>
@@ -96,11 +102,10 @@
             <form action={{ route('visitor.store') }} method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">
-                    <p style="color:red">*Beri tanda (-) bila tidak diisi</p>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Tanggal</label>
                         <input type="date" class="form-control" id="formGroupExampleInput2" placeholder=""
-                            name="tanggal" required>
+                            name="date" value="{{ date('Y-m-d') }}" readonly>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Nama</label>
@@ -116,12 +121,12 @@
                         <label for="formGroupExampleInput" class="form-label">Instansi (Jika berasal dari
                             Instansi)</label>
                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder=""
-                            name="instance" required>
+                            name="instance">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Nomor Telepon</label>
-                        <input type="number" min="0" class="form-control" placeholder="" name="phone_number"
-                            autocomplete="off" required>
+                        <input type="number" min="0" class="form-control" placeholder=""
+                            name="phone_number" autocomplete="off">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Ingin bertemu dengan</label>
@@ -135,16 +140,16 @@
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Kepentingan</label>
                         <select name="utility_id" class="dataTable-selector form-select" required>
-                        <option value="" selected="" disabled>-- Pilih --</option>
-                        @foreach ($utility as $ut)
-                            <option value="{{ $ut->id }}">{{ $ut->utilities }}</option>
-                        @endforeach
+                            <option value="" selected="" disabled>-- Pilih --</option>
+                            @foreach ($utility as $ut)
+                                <option value="{{ $ut->id }}">{{ $ut->utilities }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Keterangan</label>
                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder=""
-                            name="desc" required>
+                            name="desc" >
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -158,20 +163,28 @@
 
 <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Pilih Tanggal</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form method="get" action="{{ route('visitor.pdf') }}">
+                    <label for="date">Tanggal Untuk Mencetak Laporan</label>
+                    <input type="date" id="date" name="date" class="form-control">
+
+
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" target="_blank">Buat PDF</button>
+                </form>
+            </div>
+
+
         </div>
-        <div class="modal-body">
-            <label for="formGroupExampleInput2" class="form-label">Tanggal</label>
-            <input class="form-control" type="date" name="created_at" id="" required>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a href="{{ url('visitor/pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a>
-        </div>
-      </div>
     </div>
-  </div>
-  
+</div>

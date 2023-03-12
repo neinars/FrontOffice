@@ -29,16 +29,16 @@
                                     <div class="row">
                                         <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                             <div class="mb-2 me-2">
-                                                <img src="assets/images/gg_profile1.png" alt="">
+                                                <img src="assets/images/gg_profile.png" alt="">
                                             </div>
                                             <div>
                                                 <h6 class="font-semibold">Harian</h6>
                                                 {{-- @foreach ($daily as $d)                                                     --}}
                                                 <h6 class="font-extrabold mb-0">
-                                                    @foreach ($daily as $d)
+                                                    {{-- @foreach ($daily as $d)
                                                         {{ $d->created_at->format('d') }}
-                                                    @endforeach</h6>
-                                                {{-- @endforeach --}}
+                                                    @endforeach</h6> --}}
+                                                    {{ $total }}
                                             </div>
                                         </div>
                                     </div>
@@ -51,11 +51,11 @@
                                     <div class="row">
                                         <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                             <div class="mb-2 me-2">
-                                                <img src="assets/images/gg_profile2.png" alt="">
+                                                <img src="assets/images/gg_profile.png" alt="">
                                             </div>
                                             <div>
-                                                <h6 class="text-muted font-semibold">Harian</h6>
-                                                <h6 class="font-extrabold mb-0">112.000</h6>
+                                                <h6 class="text-muted font-semibold">Bulanan</h6>
+                                                <h6 class="font-extrabold mb-0">{{ $monthly->total_visitors }}</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@
                         <div class="card-body py-4 px-4" style="background: #FFFDEC; border-radius: 1rem;">
                             <div class="d-flex align-items-center">
                                 <div class="mb-2 me-2">
-                                    <img src="assets/images/gg_profile3.png" alt="">
+                                    <img src="assets/images/gg_profile.png" alt="">
                                 </div>
                                 <div class="ms-3 name">
                                     <h5 class="font-bold">Admin</h5>
@@ -152,7 +152,7 @@
                 {{ $kepsek }}, {{ $tu }}, {{ $bp }}, {{ $staff_m }}, {{ $staff_tu }}, {{ $guru }}, {{ $guru_piket }}, {{ $dll }}
             ],
             labels: ["Kepala Sekolah", "TU", 'BP', 'Staff Management', 'Staff TU', 'Guru', 'Guru Piket', 'Dan lain-lain'],
-            colors: ["#435ebe", "#55c6e8"],
+            colors: ["#435ebe", "#55c6e8", "#CEE1EE", "#7591BB", "#224761", "#4189BB", "#4CAFF5", "#2097EA"],
             chart: {
                 type: "donut",
                 width: "100%",

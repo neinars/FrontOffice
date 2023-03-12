@@ -60,7 +60,7 @@
                                 @foreach ($tdata as $t)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $t->created_at->format('d-m-Y') }}</td>
+                                        <td>{{ $t->date }}</td>
                                         <td>{{ $t->name }}</td>
                                         <td>{{ $t->address }}</td>
                                         <td>{{ $t->instance }}</td>

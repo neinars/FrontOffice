@@ -15,7 +15,7 @@ class CreateUtilitiesTable extends Migration
     {
         Schema::create('utilities', function (Blueprint $table) {
             $table->id();
-            $table->enum('utilities', ['Kedinasan', 'Kesiswaan', 'BP', 'TU', 'Dan lain-lain']);
+            $table->enum('utilities', ['Kedinasan', 'Kesiswaan', 'BP', 'TU', 'Lain-lain']);
             $table->timestamps();
         });
     }

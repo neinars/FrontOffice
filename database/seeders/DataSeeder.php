@@ -87,17 +87,19 @@ class DataSeeder extends Seeder
             'phone_number' => null,
             'meet_id' => 1,
             'utility_id' => 4,
-            'desc' => 'asdasd'
+            'desc' => 'asdasd',
+            'date' => '2023-03-09'
         ]);
 
         Visitor::create([
-            'name' => 'Johm Kendall',
+            'name' => 'John Kendall',
             'address' => 'Presidential',
             'instance' => 'PT Johanna Luar',
             'phone_number' => '021631784',
             'meet_id' => 1,
             'utility_id' => 1,
-            'desc' => 'asdasd'
+            'desc' => 'asdasd',
+            'date' => '2023-02-10'
         ]);
 
         Visitor::create([
@@ -107,7 +109,8 @@ class DataSeeder extends Seeder
             'phone_number' => '021491393',
             'meet_id' => 1,
             'utility_id' => 1,
-            'desc' => 'asdasd'
+            'desc' => 'asdasd',
+            'date' => '2023-03-11'
         ]);
     }
 }

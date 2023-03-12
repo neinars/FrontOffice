@@ -93,11 +93,11 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($visitor as $p)
+            @foreach ($visitors as $p)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $p->name }}</td>
-                    <td>{{ $p->created_at->format('d-m-Y') }}</td>
+                    <td>{{ \Carbon\Carbon::parse($p->date)->format('d-m-Y') }}</td>
                     <td>{{ $p->address }}</td>
                     <td>{{ $p->instance }}</td>
                     <td>{{ $p->phone_number }}</td>

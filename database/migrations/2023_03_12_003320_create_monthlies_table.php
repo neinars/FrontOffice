@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMeetsTable extends Migration
+class CreateMonthliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateMeetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('meets', function (Blueprint $table) {
+        Schema::create('monthlies', function (Blueprint $table) {
             $table->id();
-            $table->enum('meet_with', ['Kepala Sekolah', 'TU', 'BP', 'Staff Management', 'Staff TU', 'Guru', 'Guru Piket', 'Lain-lain']);
+            $table->string('month');
+            $table->string('year');
+            $table->string('total_visitors');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateMeetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('meets');
+        Schema::dropIfExists('monthlies');
     }
 }
