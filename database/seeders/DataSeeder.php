@@ -60,7 +60,7 @@ class DataSeeder extends Seeder
             'meet_with' => 'Guru Piket',
         ]);
         Meet::create([
-            'meet_with' => 'Dan lain-lain',
+            'meet_with' => 'lain-lain',
         ]);
 
 
@@ -77,7 +77,7 @@ class DataSeeder extends Seeder
             'utilities' => 'TU'
         ]);
         Utility::create([
-            'utilities' => 'Dan lain-lain'
+            'utilities' => 'lain-lain'
         ]);
 
         Visitor::create([
