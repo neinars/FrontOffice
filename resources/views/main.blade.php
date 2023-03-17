@@ -85,15 +85,15 @@
                                 <img src="assets/images/gg_profile.png" alt="">
                             </div>
                             <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                     aria-expanded="false" >
                                     @foreach ($profile as $p)
                                         <h5 class="font-bold">{{ $p->name }}</h5>
                                     @endforeach
                                 </button>
-                                <ul class="dropdown-menu">
-                                    <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit Profile</button></li>
-                                </ul>
+                                {{-- <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" type="button" >Edit Profile</button></li>
+                                </ul> --}}
                             </div>
                             {{-- <div class="ms-3 name">
                                     @foreach ($profile as $p)
