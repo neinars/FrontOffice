@@ -7,6 +7,7 @@ use App\Models\Visitor;
 use App\Models\Meet;
 use App\Models\Utility;
 use App\Models\Day;
+use App\Models\User;
 
 class DataSeeder extends Seeder
 {
@@ -17,6 +18,11 @@ class DataSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('password')
+        ]);
 
         Day::create([
             'name' => 'Senin'

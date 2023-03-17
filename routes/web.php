@@ -2,6 +2,7 @@
 
 use App\Models\Day;
 use App\Models\Teacher;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('main');
-// });
+Auth::routes();
 
-Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', function () {
+    return redirect()->route('login');
+});
+
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+Route::post('/update/{$id}', [\App\Http\Controllers\HomeController::class, 'update'])->name('home.update');
 
 Route::get('visitor', [\App\Http\Controllers\VisitorController::class, 'index'])->name('visitor.index');
 Route::post('visitor/store', [\App\Http\Controllers\VisitorController::class, 'store'])->name('visitor.store'); 

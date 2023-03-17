@@ -6,6 +6,7 @@ use App\Models\Utility;
 use App\Models\Visitor;
 use App\Models\Meet;
 use App\Models\Monthly;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -20,7 +21,8 @@ class HomeController extends Controller
     {
         $this_year = Carbon::now()->format('Y');
         $daily = Visitor::where('created_at', 'LIKE', $this_year . '%')->get();
-
+        // $monthVisitor = [];
+        $profile = User::get();
         $visitor = Visitor::where(
             'created_at',
             'LIKE',
@@ -90,6 +92,7 @@ class HomeController extends Controller
             )[1];
             $monthVisitor[(int) $month] += 1;
         }
+        // dd($monthVisitor);
         return view(
             'main',
             compact(
@@ -104,7 +107,8 @@ class HomeController extends Controller
                 'guru_piket',
                 'dll',
                 'total',
-                'monthly'
+                'monthly',
+                'profile'
             )
         )->with('monthVisitor', $monthVisitor);
     }
@@ -161,7 +165,14 @@ class HomeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $profile = User::findOrFail($id);
+        $profile->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $request->bcrypt('password')
+        ]);
+
+        return redirect()->back();
     }
 
     /**

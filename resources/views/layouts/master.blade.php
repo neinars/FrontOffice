@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="{{ asset('assets/css/shared/iconly.css') }}">
 
     <link rel="stylesheet" href="{{ asset('assets/extensions/simple-datatables/style.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/pages/simple-datatables.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/simple-datatables.css') }}">
 
 </head>
 
-<body style="background: #FFF">
+<body style="background: #FFF" class="theme-light">
     <div id="app">
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active" style="background: #224761">
@@ -29,28 +29,29 @@
                         </div> --}}
                         <h4 style="color:#FFF"> FrontOffice</h4>
                         <div class="toggler">
-                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i
+                                    class="bi bi-x bi-middle"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="sidebar-menu">
                     <ul class="menu">
                         <li class="sidebar-title" style="color: white">Menu</li>
-    
-                        <li class="sidebar-item {{ (request()->is('/')) ? 'sidebar-item active' : '' }} ">
+
+                        <li class="sidebar-item {{ request()->is('/') ? 'sidebar-item active' : '' }} ">
                             <a href="{{ url('/') }}" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span style="color: white">Dashboard</span>
                             </a>
                         </li>
-    
-                        <li class="sidebar-item {{ (request()->is('visitor')) ? 'sidebar-item active' : '' }} ">
+
+                        <li class="sidebar-item {{ request()->is('visitor') ? 'sidebar-item active' : '' }} ">
                             <a href="{{ url('/visitor') }}" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
                                 <span style="color: white">Buku Tamu</span>
                             </a>
                         </li>
-    
+
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-collection-fill"></i>
@@ -74,12 +75,25 @@
                                 </li>
                             </ul>
                         </li>
-    
-                        <li class="sidebar-item {{ (request()->is('siswa')) ? 'sidebar-item active' : '' }} ">
+
+                        <li class="sidebar-item {{ request()->is('siswa') ? 'sidebar-item active' : '' }} ">
                             <a href="{{ url('/siswa') }}" class='sidebar-link'>
                                 <i class="bi bi-grid-1x2-fill"></i>
                                 <span style="color: white">Data Siswa</span>
                             </a>
+                        </li>
+
+                        <li class="sidebar-item {{ request()->is('logout') ? 'sidebar-item active' : '' }} ">
+                            <a class="sidebar-link" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                <i class="bi bi-box-arrow-left"></i>
+                                <span style="color: white">Logout</span>
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
                 </div>
@@ -90,6 +104,18 @@
             @yield('main')
         </div>
     </div>
+
+    <script>
+        const appBody = document.body;
+        if (localStorage.getItem('theme') == 'theme-dark') {
+            localStorage.setItem('theme', 'theme-light')
+            appBody.classList.add("theme-light");
+        } else {
+            localStorage.setItem('theme', 'theme-light')
+            appBody.classList.add("theme-light");
+        };
+    </script>
+
     <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
 
@@ -99,7 +125,7 @@
     <script src="{{ asset('assets/extensions/apexcharts/apexcharts.min.js') }}"></script>
 
     <script src="{{ asset('assets/extensions/simple-datatables/umd/simple-datatables.js') }}"></script>
-<script src="{{ asset('assets/js/pages/simple-datatables.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/simple-datatables.js') }}"></script>
 
 
 </body>
